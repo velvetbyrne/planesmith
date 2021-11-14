@@ -22,3 +22,24 @@
             android:textColor="#000"
             android:textSize="25sp" />
     </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/story_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="680dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp">
+
+        <Button
+            android:id="@+id/add_story"
+            android:layout_width="175dp"
+            android:layout_height="125dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="220dp"
+            android:background="#A3A2A2"
+            android:backgroundTint="#A3A2A2"
+            android:backgroundTintMode="add"
+            android:text="@string/plus" />
+    </RelativeLayout>
+</RelativeLayout>
