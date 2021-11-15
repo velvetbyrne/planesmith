@@ -1,9 +1,10 @@
 <resources>
-    <string name="app_name">planesmith</string>
+    <string name="app_name">Planesmith</string>
     <string name="story">Story</string>
     <string name="characters">Characters</string>
     <string name="world">World</string>
     <string name="synopsis">Synopsis</string>
     <string name="encyclopedia">Encyclopedia</string>
     <string name="plus">+</string>
+    <string name="new_story">New Story</string>
 </resources>

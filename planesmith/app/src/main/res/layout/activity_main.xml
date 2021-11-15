@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="Planesmith"
+            android:text="@string/app_name"
             android:textColor="#000"
             android:textSize="25sp" />
     </RelativeLayout>
@@ -40,5 +40,16 @@
             android:background="@color/colorPrimaryDark"
             android:backgroundTintMode="add"
             android:text="@string/plus" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/add_story"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="268dp"
+            android:text="@string/new_story"
+            android:textSize="17sp" />
     </RelativeLayout>
 </RelativeLayout>
