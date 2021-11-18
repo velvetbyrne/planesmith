@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Planesmith</string>
     <string name="story">Story</string>
+    <string name="story_title">Story Title</string>
     <string name="characters">Characters</string>
     <string name="world">World</string>
     <string name="synopsis">Synopsis</string>

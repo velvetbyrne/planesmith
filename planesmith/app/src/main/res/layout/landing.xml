@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent">
 
     <!-- Header aligned to top -->
 
@@ -12,20 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:background="#ccc"
-        android:gravity="left">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
-            android:text="Story Name"
-            android:textColor="#000"
-            android:textSize="25sp" />
-    </RelativeLayout>
+        android:gravity="start"
+        android:background="@color/colorAccent"/>
 
     <RelativeLayout
         android:id="@+id/landing_content"
@@ -51,7 +38,8 @@
             android:layout_marginBottom="-55dp"
             android:text="@string/synopsis"
             android:textColor="#000"
-            android:textSize="30sp" />
+            android:textSize="30sp"
+            android:fontFamily="sans-serif-light"/>
 
         <TextView
             android:id="@+id/encyclopedia"
@@ -63,42 +51,76 @@
             android:layout_marginBottom="-150dp"
             android:text="@string/encyclopedia"
             android:textColor="#000"
-            android:textSize="30sp" />
+            android:textSize="30sp"
+            android:fontFamily="sans-serif-light"/>
 
         <Button
             android:id="@+id/characters"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="250dp"
-            android:background="@color/white"
+            android:layout_marginBottom="243dp"
             android:text="@string/characters"
             android:textAlignment="textStart"
-            android:textColor="#fff"
-            android:textSize="15sp" />
+            android:textColor="#000"
+            android:textSize="15sp"
+            app:backgroundTint="@color/white"
+            style="?android:attr/borderlessButtonStyle"/>
 
         <Button
             android:id="@+id/world"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="200dp"
-            android:background="@color/white"
+            android:layout_marginBottom="190dp"
             android:text="@string/world"
             android:textAlignment="textStart"
-            android:textColor="#fff"
-            android:textSize="15sp" />
+            android:textColor="#000"
+            android:textSize="15sp"
+            app:backgroundTint="@color/white"
+            style="?android:attr/borderlessButtonStyle"/>
 
         <Button
             android:id="@+id/story"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="150dp"
-            android:background="@color/white"
+            android:layout_marginBottom="129dp"
             android:text="@string/story"
             android:textAlignment="textStart"
-            android:textColor="#fff"
-            android:textSize="15sp" />
+            android:textColor="#000"
+            android:textSize="15sp"
+            app:backgroundTint="@color/white"
+            style="?android:attr/borderlessButtonStyle"/>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/storytitle2"
+            android:layout_width="390dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/synopsis"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="67dp"
+            android:layout_marginEnd="4dp"
+            android:background="#00000000"
+            android:gravity="start"
+            android:hint="@string/synopsis"
+            android:minHeight="48dp" />
+
     </RelativeLayout>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/storytitle"
+        android:layout_width="390dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/header"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="#00000000"
+        android:gravity="start"
+        android:hint="@string/story_title"
+        android:minHeight="48dp" />
+
 </RelativeLayout>

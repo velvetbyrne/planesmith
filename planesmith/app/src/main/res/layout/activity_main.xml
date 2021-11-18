@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <!-- Header aligned to top -->
 
@@ -11,13 +11,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:background="#ccc"
+        android:background="@color/colorAccent"
         android:gravity="left">
 
         <TextView
+            android:id="@+id/headertext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="sans-serif-smallcaps"
             android:text="@string/app_name"
             android:textColor="#000"
             android:textSize="25sp" />
@@ -31,13 +36,13 @@
         android:layout_marginBottom="0dp">
 
         <Button
-            android:id="@+id/add_story"
+            android:id="@+id/add_story2"
             android:layout_width="175dp"
             android:layout_height="125dp"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="25dp"
             android:layout_marginEnd="220dp"
-            android:background="@color/colorPrimaryDark"
+            app:backgroundTint="@color/colorPrimary"
             android:backgroundTintMode="add"
             android:text="@string/plus" />
 
@@ -45,11 +50,22 @@
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/add_story"
+            android:layout_below="@+id/add_story2"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="6dp"
-            android:layout_marginEnd="268dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="270dp"
+            android:fontFamily="sans-serif-light"
             android:text="@string/new_story"
             android:textSize="17sp" />
+
+        <Button
+            android:id="@+id/debugbuttontemp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="326dp"
+            android:text="Debug"
+            android:textColor="#000" />
+
     </RelativeLayout>
 </RelativeLayout>
