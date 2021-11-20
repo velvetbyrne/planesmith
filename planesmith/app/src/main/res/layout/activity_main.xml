@@ -29,43 +29,100 @@
     </RelativeLayout>
 
     <RelativeLayout
-        android:id="@+id/story_buttons"
+        android:id="@+id/landing_content"
         android:layout_width="match_parent"
         android:layout_height="680dp"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="0dp">
 
-        <Button
-            android:id="@+id/add_story2"
-            android:layout_width="175dp"
-            android:layout_height="125dp"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="25dp"
-            android:layout_marginEnd="220dp"
-            app:backgroundTint="@color/colorPrimary"
-            android:backgroundTintMode="add"
-            android:text="@string/plus" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="223dp"
+            android:layout_marginTop="1dp"
+            app:srcCompat="@drawable/ic_launcher_background" />
 
         <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
+            android:id="@+id/synopsis"
+            android:layout_width="390dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/add_story2"
+            android:layout_alignBottom="@+id/imageView"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="270dp"
+            android:layout_marginEnd="17dp"
+            android:layout_marginBottom="-48dp"
             android:fontFamily="sans-serif-light"
-            android:text="@string/new_story"
-            android:textSize="17sp" />
+            android:text="@string/synopsis"
+            android:textColor="#000"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/encyclopedia"
+            android:layout_width="390dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageView"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="17dp"
+            android:layout_marginBottom="-146dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/encyclopedia"
+            android:textColor="#000"
+            android:textSize="30sp" />
 
         <Button
-            android:id="@+id/debugbuttontemp"
+            android:id="@+id/characters"
+            style="?android:attr/borderlessButtonStyle"
             android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="243dp"
+            android:text="@string/characters"
+            android:textAlignment="textStart"
+            android:textColor="#000"
+            android:textSize="15sp"
+            app:backgroundTint="@color/white" />
+
+        <Button
+            android:id="@+id/world"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="190dp"
+            android:text="@string/world"
+            android:textAlignment="textStart"
+            android:textColor="#000"
+            android:textSize="15sp"
+            app:backgroundTint="@color/white" />
+
+        <Button
+            android:id="@+id/story"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="129dp"
+            android:text="@string/story"
+            android:textAlignment="textStart"
+            android:textColor="#000"
+            android:textSize="15sp"
+            app:backgroundTint="@color/white" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/storytitle2"
+            android:layout_width="390dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="632dp"
-            android:text="Debug"
-            android:textColor="#000" />
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="356dp"
+            android:background="#00000000"
+            android:gravity="start"
+            android:hint="@string/synopsis"
+            android:minHeight="48dp" />
 
     </RelativeLayout>
+
+
 </RelativeLayout>
