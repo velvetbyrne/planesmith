@@ -8,6 +8,7 @@ public class Characters extends AppCompatActivity {
     int id;
     String name;
     String description;
+    String group;
     String created_at;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,15 +20,17 @@ public class Characters extends AppCompatActivity {
     public Characters () {
     }
 
-    public Characters (String name, String description) {
+    public Characters (String name, String description, String group) {
         this.name = name;
         this.description = description;
+        this.group = group;
     }
 
-    public Characters(int id, String name, String description) {
+    public Characters (int id, String name, String description, String group) {
         this.id = id;
         this.name = name;
         this.description = description;
+        this.group = group;
     }
 
     // setter
@@ -41,6 +44,10 @@ public class Characters extends AppCompatActivity {
 
     public void setDescription (String description) {
         this.description = description;
+    }
+
+    public void setGroup (String group) {
+        this.group = group;
     }
 
     public void setCreatedAt(String created_at){
@@ -58,5 +65,9 @@ public class Characters extends AppCompatActivity {
 
     public String getDescription() {
         return this.description;
+    }
+
+    public String getGroup() {
+        return this.group;
     }
 }
