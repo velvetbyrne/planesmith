@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "493803727167",
+    "project_id": "planesmith-c3478",
+    "storage_bucket": "planesmith-c3478.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:493803727167:android:2a11a53807ad8de6d20b8a",
+        "android_client_info": {
+          "package_name": "umn.ac.id.planesmith"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "493803727167-a3f8pekalti2bmdqssr9g5jqekcknd35.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWOjxVyLzkbx2Q8AH2SvZETXRkQS58e_g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "493803727167-a3f8pekalti2bmdqssr9g5jqekcknd35.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
