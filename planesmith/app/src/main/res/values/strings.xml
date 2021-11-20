@@ -1,4 +1,5 @@
 <resources>
+    // Strings for UI
     <string name="app_name">Planesmith</string>
     <string name="story">Story</string>
     <string name="story_title">Story Title</string>
@@ -8,4 +9,6 @@
     <string name="encyclopedia">Encyclopedia</string>
     <string name="plus">+</string>
     <string name="new_story">New Story</string>
+    <string name="add_folder">Add Folder</string>
+    <string name="add_item">Add Item</string>
 </resources>
