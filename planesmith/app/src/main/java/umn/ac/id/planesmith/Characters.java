@@ -6,8 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Characters extends AppCompatActivity {
     int id;
-    String name;
-    String description;
+    String character_name;
+    String character_content;
     String group;
     String created_at;
 
@@ -20,16 +20,16 @@ public class Characters extends AppCompatActivity {
     public Characters () {
     }
 
-    public Characters (String name, String description, String group) {
-        this.name = name;
-        this.description = description;
+    public Characters (String character_name, String character_content, String group) {
+        this.character_name = character_name;
+        this.character_content = character_content;
         this.group = group;
     }
 
-    public Characters (int id, String name, String description, String group) {
+    public Characters (int id, String character_name, String character_content, String group) {
         this.id = id;
-        this.name = name;
-        this.description = description;
+        this.character_name = character_name;
+        this.character_content = character_content;
         this.group = group;
     }
 
@@ -38,12 +38,12 @@ public class Characters extends AppCompatActivity {
         this.id = id;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setCharacter_name(String character_name) {
+        this.character_name = character_name;
     }
 
-    public void setDescription (String description) {
-        this.description = description;
+    public void setCharacter_content (String character_content) {
+        this.character_content = character_content;
     }
 
     public void setGroup (String group) {
@@ -59,12 +59,12 @@ public class Characters extends AppCompatActivity {
         return this.id;
     }
 
-    public String getName() {
-        return this.name;
+    public String getCharacter_name() {
+        return this.character_name;
     }
 
-    public String getDescription() {
-        return this.description;
+    public String getCharacter_content() {
+        return this.character_content;
     }
 
     public String getGroup() {

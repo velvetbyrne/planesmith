@@ -42,15 +42,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String KEY_CREATED_AT = "created_at";
 
     //Character Columns
-    private static final String KEY_NAME = "name";
+    private static final String KEY_CHARACTER_NAME = "character_name";
+    private static final String KEY_CHARACTER_CONTENT = "character_content";
     private static final String KEY_GROUP = "group";
 
-    //World Columns
+    //Story Columns
     private static String KEY_CHAPTER_NAME = "chapter_name";
     private static String KEY_CHAPTER_CONTENT = "chapter_content";
     private static String KEY_ARC = "arc";
 
-    //Story Columns
+    //World Columns
 
 
 }
