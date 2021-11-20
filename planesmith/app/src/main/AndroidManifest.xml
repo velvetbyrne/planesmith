@@ -10,6 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Planesmith">
         <activity
+            android:name=".story_tmp"
+            android:exported="true"
+            android:label="@string/title_activity_story_tmp"
+            android:theme="@style/Theme.Planesmith.NoActionBar" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -19,5 +24,7 @@
             </intent-filter>
         </activity>
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
