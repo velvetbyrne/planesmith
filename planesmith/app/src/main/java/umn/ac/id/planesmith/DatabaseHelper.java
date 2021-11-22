@@ -52,6 +52,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static String KEY_ARC = "arc";
 
     //World Columns
-
+    private static String KEY_WORLD_NAME = "world_name";
+    private static String KEY_WORLD_CONTENT = "world_content";
+    private static String KEY_FOLDER = "Folder";
 
 }
