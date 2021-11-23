@@ -3,15 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Benjamin Tantra/Documents/UNI/Mobile Programmin/Lab/planesmith/app/src/main/res/drawable/background_with_shadow.xml" value="0.3828125" />
-        <entry key="..\:/Users/Benjamin Tantra/Documents/UNI/Mobile Programmin/Lab/planesmith/app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="..\:/Users/Benjamin Tantra/Documents/UNI/Mobile Programmin/Lab/planesmith/app/src/main/res/layout/characters.xml" value="0.3500905797101449" />
-        <entry key="..\:/Users/Benjamin Tantra/Documents/UNI/Mobile Programmin/Lab/planesmith/app/src/main/res/layout/content_layout_id.xml" value="0.24635416666666668" />
-        <entry key="..\:/Users/Benjamin Tantra/Documents/UNI/Mobile Programmin/Lab/planesmith/app/src/main/res/layout/landing.xml" value="0.5131195335276968" />
-        <entry key="..\:/Users/Benjamin Tantra/Documents/UNI/Mobile Programmin/Lab/planesmith/app/src/main/res/layout/story.xml" value="0.2341485507246377" />
-        <entry key="..\:/Users/Benjamin Tantra/Documents/UNI/Mobile Programmin/Lab/planesmith/app/src/main/res/layout/story_chapter.xml" value="0.3500905797101449" />
-        <entry key="..\:/Users/Benjamin Tantra/Documents/UNI/Mobile Programmin/Lab/planesmith/app/src/main/res/layout/world.xml" value="0.3500905797101449" />
-        <entry key="..\:/Users/Benjamin Tantra/Documents/UNI/Mobile Programmin/Lab/planesmith/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.3828125" />
+        <entry key="..\:/Users/Benjamin Tantra/Documents/UNI/Mobile Programmin/Lab/planesmith/app/src/main/res/layout/activity_main.xml" value="0.21693840579710144" />
+        <entry key="..\:/Users/Benjamin Tantra/Documents/UNI/Mobile Programmin/Lab/planesmith/app/src/main/res/layout/characters.xml" value="0.21693840579710144" />
+        <entry key="..\:/Users/Benjamin Tantra/Documents/UNI/Mobile Programmin/Lab/planesmith/app/src/main/res/layout/story.xml" value="0.21693840579710144" />
+        <entry key="..\:/Users/Benjamin Tantra/Documents/UNI/Mobile Programmin/Lab/planesmith/app/src/main/res/layout/world.xml" value="0.21693840579710144" />
       </map>
     </option>
   </component>
