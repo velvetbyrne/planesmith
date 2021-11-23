@@ -12,6 +12,8 @@ import androidx.recyclerview.widget.RecyclerView;
 public class MainActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     DatabaseHelper database;
+    String synopsis;
+
 
     private static final String TAG = "MainActivity";
 
@@ -59,4 +61,5 @@ public class MainActivity extends AppCompatActivity {
         });
 
     };
+
 }

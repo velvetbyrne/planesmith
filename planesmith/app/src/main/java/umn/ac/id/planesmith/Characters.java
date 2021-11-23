@@ -1,7 +1,6 @@
 package umn.ac.id.planesmith;
 
 import android.os.Bundle;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Characters extends AppCompatActivity {

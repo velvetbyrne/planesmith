@@ -12,17 +12,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         super(context, name, factory, version);
     }
 
-    //TODO: Add stuff here
-    @Override
-    public void onCreate(SQLiteDatabase sqLiteDatabase) {
-
-    }
-
-    @Override
-    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
-
-    }
-
     //LogCat
     private static final String LOG = "DatabaseHelper";
 
@@ -41,6 +30,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String KEY_ID = "id";
     private static final String KEY_CREATED_AT = "created_at";
 
+    //main_activity column names
+    private static final String KEY_SYNOPSIS = "synopsis";
+
     //Character Columns
     private static final String KEY_CHARACTER_NAME = "character_name";
     private static final String KEY_CHARACTER_CONTENT = "character_content";
@@ -56,4 +48,28 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static String KEY_WORLD_CONTENT = "world_content";
     private static String KEY_FOLDER = "Folder";
 
+    //Table create
+    private static final String CREATE_TABLE_STORY = "CREATE TABLE "
+            + TABLE_STORY + "(" + KEY_ID + " INTEGER PRIMARY KEY,"
+            + KEY_CHAPTER_NAME + " TEXT,"
+            + KEY_CHAPTER_CONTENT + " TEXT,"
+            + KEY_ARC + " TEXT,"
+            + KEY_CREATED_AT + " DATETIME" + ")";
+
+    private static final String CREATE_TABLE_WORLD = "CREATE TABLE "
+            + TABLE_WORLD + "(" + KEY_ID + " INTEGER PRIMARY KEY,"
+            + KEY_WORLD_NAME + " TEXT,"
+            + KEY_WORLD_CONTENT + " TEXT,"
+            + KEY_FOLDER + " TEXT,"
+            + KEY_CREATED_AT + " DATETIME" + ")";
+
+    @Override
+    public void onCreate(SQLiteDatabase sqLiteDatabase) {
+
+    }
+
+    @Override
+    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
+
+    }
 }
