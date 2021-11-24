@@ -14,8 +14,7 @@ public class World extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.world);
-
-    };
+    }
 
     public World() {
 

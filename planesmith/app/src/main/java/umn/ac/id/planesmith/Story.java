@@ -15,7 +15,7 @@ public class Story extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.story);
 
-    };
+    }
 
     public Story() {
 
