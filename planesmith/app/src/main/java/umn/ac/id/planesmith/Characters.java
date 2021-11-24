@@ -1,6 +1,11 @@
 package umn.ac.id.planesmith;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Characters extends AppCompatActivity {
@@ -10,9 +15,26 @@ public class Characters extends AppCompatActivity {
     String group;
     String created_at;
 
+    private static final String TAG = "Characters";
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.characters);
+        Log.d(TAG, "oncreate: Starting.");
+
+        Button addnew = (Button) findViewById(R.id.addnew);
+
+        addnew.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d(TAG, "onclick: AddNewCharacter");
+
+                Intent intent = new Intent(Characters.this, Character_Add.class);
+                startActivity(intent);
+
+
+            }
+        });
 
     };
 
