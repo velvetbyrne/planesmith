@@ -33,6 +33,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     //Character Columns
     private static final String KEY_CHARACTER_NAME = "character_name";
+    private static final String KEY_CHARACTER_AGE = "character_age";
+    private static final String KEY_CHARACTER_HEIGHT = "character_height";
+    private static final String KEY_CHARACTER_WEIGHT = "character_weight";
+    private static final String KEY_CHARACTER_GENDER = "character_gender";
     private static final String KEY_CHARACTER_CONTENT = "character_content";
     private static final String KEY_CHARACTER_GROUP = "character_group";
 
@@ -50,6 +54,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String CREATE_TABLE_CHARACTERS = "CREATE TABLE "
             + TABLE_CHARACTERS + "(" + KEY_ID + " INTEGER PRIMARY KEY,"
             + KEY_CHARACTER_NAME + " TEXT, "
+            + KEY_CHARACTER_AGE + " TEXT, "
+            + KEY_CHARACTER_HEIGHT + " TEXT, "
+            + KEY_CHARACTER_WEIGHT + " TEXT, "
+            + KEY_CHARACTER_GENDER + " TEXT, "
             + KEY_CHARACTER_CONTENT + " TEXT, "
             + KEY_CHARACTER_GROUP + " TEXT, "
             + KEY_CREATED_AT + " DATETIME" + ")";
