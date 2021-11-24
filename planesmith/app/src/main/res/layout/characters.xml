@@ -19,6 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:text="Characters"
+            android:fontFamily="sans-serif-smallcaps"
             android:textColor="#000"
             android:textSize="25sp" />
         </TableRow>

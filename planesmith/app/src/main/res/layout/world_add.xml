@@ -18,6 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:text="World"
+            android:fontFamily="sans-serif-smallcaps"
             android:textColor="#000"
             android:textSize="25sp" />
     </RelativeLayout>
