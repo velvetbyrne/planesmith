@@ -17,32 +17,189 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="@string/characters"
             android:fontFamily="sans-serif-smallcaps"
+            android:text="@string/characters"
             android:textColor="#000"
             android:textSize="25sp" />
     </RelativeLayout>
 
+    <ImageView
+        android:id="@+id/character_portrait"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="139dp"
+        tools:layout_editor_absoluteY="58dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/charname"
+        android:layout_width="78dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="7dp"
+        android:text="@string/character_name"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/character_name"
+        app:layout_constraintTop_toBottomOf="@+id/character_portrait" />
+
     <EditText
         android:id="@+id/character_name"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="311dp"
+        android:layout_height="44dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
-        android:hint="Name"
+        android:hint="@string/character_name"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/header" />
+        app:layout_constraintTop_toBottomOf="@+id/character_portrait" />
 
+    <TextView
+        android:id="@+id/charage"
+        android:layout_width="78dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="7dp"
+        android:text="@string/character_age"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/character_name"
+        app:layout_constraintTop_toBottomOf="@+id/character_portrait" />
+
+    <EditText
+        android:id="@+id/character_age"
+        android:layout_width="311dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="@string/character_age"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/character_portrait" />
+
+    <TextView
+        android:id="@+id/charht"
+        android:layout_width="78dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginEnd="7dp"
+        android:text="@string/character_height"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/character_name"
+        app:layout_constraintTop_toBottomOf="@+id/character_portrait" />
+
+    <EditText
+        android:id="@+id/character_height"
+        android:layout_width="311dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="@string/character_height"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/character_portrait"/>
+
+    <TextView
+        android:id="@+id/charwt"
+        android:layout_width="78dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="7dp"
+        android:text="@string/character_weight"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/character_name"
+        app:layout_constraintTop_toBottomOf="@+id/character_portrait" />
+
+    <EditText
+        android:id="@+id/character_weight"
+        android:layout_width="311dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="@string/character_weight"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/character_portrait" />
+
+    <TextView
+        android:id="@+id/chargen"
+        android:layout_width="78dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="210dp"
+        android:layout_marginEnd="7dp"
+        android:text="@string/character_gender"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/character_name"
+        app:layout_constraintTop_toBottomOf="@+id/character_portrait" />
+
+    <EditText
+        android:id="@+id/character_gender"
+        android:layout_width="311dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="210dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="@string/character_gender"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/character_portrait" />
+
+    <TextView
+        android:id="@+id/chargrp"
+        android:layout_width="78dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="260dp"
+        android:layout_marginEnd="7dp"
+        android:text="@string/character_group"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/character_name"
+        app:layout_constraintTop_toBottomOf="@+id/character_portrait" />
+
+    <EditText
+        android:id="@+id/character_group"
+        android:layout_width="311dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="260dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="@string/character_group"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/character_portrait" />
+
+    //CHARACTER CONTENT STARTS HERE
+    //TODO: ADD SCROLLVIEW
     <EditText
         android:id="@+id/character_content"
         style="@style/Widget.AppCompat.AutoCompleteTextView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="389dp"
+        android:layout_height="200dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
@@ -56,6 +213,8 @@
         android:textColorLink="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/character_name" />
+        app:layout_constraintTop_toBottomOf="@+id/character_name"
+        app:layout_constraintVertical_bias="0.964" />
 </androidx.constraintlayout.widget.ConstraintLayout>
