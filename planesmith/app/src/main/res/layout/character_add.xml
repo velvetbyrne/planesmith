@@ -191,6 +191,7 @@
                     android:layout_span="2"
                     android:background="@null"
                     android:ems="10"
+                    android:paddingTop="10dp"
                     android:gravity="start|top"
                     android:hint="@string/character_details"
                     android:inputType="textMultiLine"
