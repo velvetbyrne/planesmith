@@ -1,6 +1,10 @@
 package umn.ac.id.planesmith;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,11 +15,26 @@ public class World extends AppCompatActivity {
     String folder;
     String created_at;
 
+    private static final String TAG = "World";
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.world);
+        Log.d(TAG, "oncreate: Starting.");
+        Button addnew = (Button) findViewById(R.id.addnew);
 
-    };
+        addnew.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d(TAG, "onclick: AddNewStory");
+
+                Intent intent = new Intent(World.this, World_Add.class);
+                startActivity(intent);
+
+
+            }
+        });
+    }
 
     public World() {
 

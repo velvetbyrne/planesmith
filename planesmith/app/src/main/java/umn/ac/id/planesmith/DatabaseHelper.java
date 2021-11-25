@@ -7,20 +7,10 @@ import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
+    SQLiteDatabase db;
 
     public DatabaseHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
-    }
-
-    //TODO: Add stuff here
-    @Override
-    public void onCreate(SQLiteDatabase sqLiteDatabase) {
-
-    }
-
-    @Override
-    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
-
     }
 
     //LogCat
@@ -43,8 +33,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     //Character Columns
     private static final String KEY_CHARACTER_NAME = "character_name";
+    private static final String KEY_CHARACTER_AGE = "character_age";
+    private static final String KEY_CHARACTER_HEIGHT = "character_height";
+    private static final String KEY_CHARACTER_WEIGHT = "character_weight";
+    private static final String KEY_CHARACTER_GENDER = "character_gender";
     private static final String KEY_CHARACTER_CONTENT = "character_content";
-    private static final String KEY_GROUP = "group";
+    private static final String KEY_CHARACTER_GROUP = "character_group";
 
     //Story Columns
     private static String KEY_CHAPTER_NAME = "chapter_name";
@@ -56,4 +50,49 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static String KEY_WORLD_CONTENT = "world_content";
     private static String KEY_FOLDER = "Folder";
 
+    //Table create
+    private static final String CREATE_TABLE_CHARACTERS = "CREATE TABLE "
+            + TABLE_CHARACTERS + "(" + KEY_ID + " INTEGER PRIMARY KEY,"
+            + KEY_CHARACTER_NAME + " TEXT, "
+            + KEY_CHARACTER_AGE + " TEXT, "
+            + KEY_CHARACTER_HEIGHT + " TEXT, "
+            + KEY_CHARACTER_WEIGHT + " TEXT, "
+            + KEY_CHARACTER_GENDER + " TEXT, "
+            + KEY_CHARACTER_CONTENT + " TEXT, "
+            + KEY_CHARACTER_GROUP + " TEXT, "
+            + KEY_CREATED_AT + " DATETIME" + ")";
+
+    private static final String CREATE_TABLE_STORY = "CREATE TABLE "
+            + TABLE_STORY + "(" + KEY_ID + " INTEGER PRIMARY KEY,"
+            + KEY_CHAPTER_NAME + " TEXT,"
+            + KEY_CHAPTER_CONTENT + " TEXT,"
+            + KEY_ARC + " TEXT,"
+            + KEY_CREATED_AT + " DATETIME" + ")";
+
+    private static final String CREATE_TABLE_WORLD = "CREATE TABLE "
+            + TABLE_WORLD + "(" + KEY_ID + " INTEGER PRIMARY KEY,"
+            + KEY_WORLD_NAME + " TEXT,"
+            + KEY_WORLD_CONTENT + " TEXT,"
+            + KEY_FOLDER + " TEXT,"
+            + KEY_CREATED_AT + " DATETIME" + ")";
+
+    public DatabaseHelper(Context context) {
+        super(context, DATABASE_NAME, null, DATABASE_VERSION);
+    }
+
+    @Override
+    public void onCreate(SQLiteDatabase sqLiteDatabase) {
+        db.execSQL(CREATE_TABLE_WORLD);
+        db.execSQL(CREATE_TABLE_CHARACTERS);
+        db.execSQL(CREATE_TABLE_STORY);
+    }
+
+    @Override
+    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_WORLD);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_CHARACTERS);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_STORY);
+
+        onCreate(db);
+    }
 }

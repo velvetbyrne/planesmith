@@ -5,7 +5,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <!-- Header aligned to top -->
-
     <RelativeLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
@@ -29,43 +28,77 @@
     </RelativeLayout>
 
     <RelativeLayout
-        android:id="@+id/story_buttons"
+        android:id="@+id/landing_content"
         android:layout_width="match_parent"
-        android:layout_height="680dp"
+        android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="0dp">
 
-        <Button
-            android:id="@+id/add_story2"
-            android:layout_width="175dp"
-            android:layout_height="125dp"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="25dp"
-            android:layout_marginEnd="220dp"
-            app:backgroundTint="@color/colorPrimary"
-            android:backgroundTintMode="add"
-            android:text="@string/plus" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="223dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="16dp"
+            app:srcCompat="@drawable/ic_launcher_background" />
 
         <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
+            android:id="@+id/encyclopedia"
+            android:layout_width="390dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/add_story2"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="270dp"
+            android:layout_marginTop="350dp"
+            android:layout_marginEnd="206dp"
+            android:layout_marginBottom="-60dp"
             android:fontFamily="sans-serif-light"
-            android:text="@string/new_story"
-            android:textSize="17sp" />
+            android:text="@string/encyclopedia"
+            android:textColor="#000"
+            android:textSize="30sp" />
 
         <Button
-            android:id="@+id/debugbuttontemp"
+            android:id="@+id/characters"
+            style="?android:attr/borderlessButtonStyle"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="326dp"
-            android:text="Debug"
-            android:textColor="#000" />
+            android:layout_height="50dp"
+            android:layout_alignBottom="@+id/encyclopedia"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="200dp"
+            android:onClick="onCharacterClicked"
+            android:text="@string/characters"
+            android:textAlignment="textStart"
+            android:textColor="#000"
+            android:textSize="15sp"
+            app:backgroundTint="@color/white" />
+
+        <Button
+            android:id="@+id/world"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignBottom="@+id/characters"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="141dp"
+            android:text="@string/world"
+            android:textAlignment="textStart"
+            android:textColor="#000"
+            android:textSize="15sp"
+            app:backgroundTint="@color/white" />
+
+        <Button
+            android:id="@+id/story"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="80dp"
+            android:text="@string/story"
+            android:textAlignment="textStart"
+            android:textColor="#000"
+            android:textSize="15sp"
+            app:backgroundTint="@color/white" />
+
 
     </RelativeLayout>
-</RelativeLayout>
+
+
+    </RelativeLayout>

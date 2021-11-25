@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="umn.ac.id.planesmith">
 
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,10 +14,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Planesmith">
         <activity
-            android:name=".story_tmp"
-            android:exported="true"
-            android:label="@string/title_activity_story_tmp"
-            android:theme="@style/Theme.Planesmith.NoActionBar" />
+            android:name=".Character_Add"
+            android:exported="false" />
+        <activity
+            android:name=".World_Add"
+            android:exported="false" />
+        <activity
+            android:name=".Story_Add"
+            android:exported="false" />
+        <activity
+            android:name=".StoryAdd"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -23,8 +34,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Characters" />
+        <activity android:name=".Story" />
+        <activity android:name=".World" />
     </application>
-
-    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
