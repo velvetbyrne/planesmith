@@ -37,32 +37,18 @@
     </RelativeLayout>
 
     //TODO: Recycler view for SQLite
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/header"
         app:layout_constraintTop_toBottomOf="@id/header">
 
-        <TableLayout
-            android:layout_width="match_parent"
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-        </TableLayout>
+        </androidx.recyclerview.widget.RecyclerView>
     </ScrollView>
 
 </RelativeLayout>
