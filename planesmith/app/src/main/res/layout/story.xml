@@ -35,7 +35,7 @@
             </TableRow>
         </TableLayout>
     </RelativeLayout>
-    
+
     //TODO: Recycler view for SQLite
     <ScrollView
         android:layout_width="match_parent"
