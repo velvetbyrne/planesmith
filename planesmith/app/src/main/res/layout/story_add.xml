@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,14 +15,35 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
+            android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="Story"
+            android:layout_marginStart="44dp"
             android:fontFamily="sans-serif-smallcaps"
+            android:text="Story"
             android:textColor="#000"
-            android:textSize="25sp" />
-    </RelativeLayout>
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/addstory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:onClick="save_story"
+            android:layout_marginEnd="4dp"
+            android:backgroundTint="#034BFD"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -44,27 +65,29 @@
                     android:layout_width="410dp"
                     android:layout_height="wrap_content"
                     android:ems="10"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center"
                     android:hint="@string/chapter_name"
                     android:inputType="textPersonName"
-                    android:fontFamily="sans-serif-medium"
-                    android:gravity="center"/>
+                    tools:ignore="TouchTargetSizeCheck" />
             </TableRow>
             <TableRow
                 android:layout_height="match_parent"
                 android:layout_width="match_parent" >
 
-            <EditText
-                android:id="@+id/character_detail"
-                style="@style/Widget.AppCompat.AutoCompleteTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_span="2"
-                android:background="@null"
-                android:padding="10dp"
-                android:gravity="start|top"
-                android:hint="@string/chapter_content"
-                android:inputType="textMultiLine"
-                app:layout_constraintBottom_toBottomOf="parent" />
+                <EditText
+                    android:id="@+id/chapter_detail"
+                    style="@style/Widget.AppCompat.AutoCompleteTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="2"
+                    android:background="@null"
+                    android:gravity="start|top"
+                    android:hint="@string/chapter_content"
+                    android:inputType="textMultiLine"
+                    android:padding="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
             </TableRow>
         </TableLayout>
     </ScrollView>

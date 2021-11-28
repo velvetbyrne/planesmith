@@ -42,6 +42,11 @@ public class Story extends AppCompatActivity {
 
     }
 
+    public Story(String chapter_name, String chapter_content) {
+        this.chapter_name = chapter_name;
+        this.chapter_content = chapter_content;
+    }
+
     public Story(String chapter_name, String chapter_content, String arc) {
         this.chapter_name = chapter_name;
         this.chapter_content = chapter_content;
