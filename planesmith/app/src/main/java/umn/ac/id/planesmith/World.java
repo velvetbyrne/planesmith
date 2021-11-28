@@ -15,10 +15,25 @@ public class World extends AppCompatActivity {
     String folder;
     String created_at;
 
+    private static final String TAG = "World";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_world);
+        Button addNew = (Button) findViewById(R.id.addButton);
+
+        addNew.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d(TAG, "onClick: AddNewWorld");
+
+                Intent intent = new Intent(World.this, AddWorld.class);
+                startActivity(intent);
+
+
+            }
+        });
     }
 
     public World() {

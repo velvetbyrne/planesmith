@@ -2,7 +2,11 @@ package umn.ac.id.planesmith;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 public class Characters extends AppCompatActivity {
     int id;
@@ -15,10 +19,28 @@ public class Characters extends AppCompatActivity {
     String character_group;
     String created_at;
 
+    private static final String TAG = "Characters";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_characters);
+        Log.d(TAG, "onCreate: Starting.");
+
+        Button addButton = (Button) findViewById(R.id.addButton);
+
+        addButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d(TAG, "onclick: AddNewCharacter");
+
+                Intent intent = new Intent(Characters.this, AddCharacter.class);
+                startActivity(intent);
+
+            }
+        });
+
+
     }
 
     public Characters () {
