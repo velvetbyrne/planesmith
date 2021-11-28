@@ -1,19 +1,14 @@
 package umn.ac.id.planesmith;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
-
 public class MainActivity extends AppCompatActivity {
-    RecyclerView recyclerView;
-    DatabaseHelper database;
-    String synopsis;
-
 
     private static final String TAG = "MainActivity";
 
@@ -21,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Log.d(TAG, "oncreate: Starting.");
+        Log.d(TAG, "onCreate: Starting.");
 
         Button characters = (Button) findViewById(R.id.characters);
 
@@ -32,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         characters.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d(TAG, "onclick: Characters.");
+                Log.d(TAG, "onClick: Characters.");
 
                 Intent intent = new Intent(MainActivity.this, Characters.class);
                 startActivity(intent);
@@ -43,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         world.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d(TAG, "onclick: World.");
+                Log.d(TAG, "onClick: World.");
 
                 Intent intent = new Intent(MainActivity.this, World.class);
                 startActivity(intent);
@@ -60,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-    };
+    }
+
 
 }

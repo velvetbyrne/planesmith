@@ -1,16 +1,19 @@
 package umn.ac.id.planesmith;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.os.Bundle;
 
-import androidx.annotation.Nullable;
-
-public class DatabaseHelper extends SQLiteOpenHelper {
+//TODO: Work on Database
+public class DatabaseHelper extends AppCompatActivity {
     SQLiteDatabase db;
 
     public DatabaseHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
-        super(context, name, factory, version);
+        //(name, context, factory, version);
     }
 
     //LogCat
@@ -77,17 +80,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             + KEY_CREATED_AT + " DATETIME" + ")";
 
     public DatabaseHelper(Context context) {
-        super(context, DATABASE_NAME, null, DATABASE_VERSION);
+        //super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
-    @Override
+    //@Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         db.execSQL(CREATE_TABLE_WORLD);
         db.execSQL(CREATE_TABLE_CHARACTERS);
         db.execSQL(CREATE_TABLE_STORY);
     }
 
-    @Override
+    //@Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_WORLD);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_CHARACTERS);

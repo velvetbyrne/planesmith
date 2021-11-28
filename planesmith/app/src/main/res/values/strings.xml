@@ -1,16 +1,15 @@
 <resources>
-    // Strings for UI
-    <string name="app_name">Planesmith</string>
-    <string name="story">Story</string>
-    <string name="story_title">Story Title</string>
-    <string name="characters">Characters</string>
+    <string name="app_name">planesmith</string>
+    <string name="character">Characters</string>
     <string name="world">World</string>
-    <string name="synopsis">Synopsis</string>
+    <string name="story">Story</string>
     <string name="encyclopedia">Encyclopedia</string>
-    <string name="plus">+</string>
-    <string name="new_story">New Story</string>
-    <string name="add_folder">Add Folder</string>
-    <string name="add_item">Add Item</string>
+
+    //CRUD Buttons
+    <string name="add">Add New</string>
+    <string name="update">Update</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
 
     //Strings for Character
     <string name="character_name">Name</string>
@@ -28,5 +27,4 @@
     //Strings for Story
     <string name="chapter_name">Chapter Name</string>
     <string name="chapter_content">Chapter Content</string>
-
 </resources>
