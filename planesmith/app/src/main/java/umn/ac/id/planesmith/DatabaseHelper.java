@@ -1,16 +1,21 @@
 package umn.ac.id.planesmith;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.os.Bundle;
 
-import androidx.annotation.Nullable;
-
-public class DatabaseHelper extends SQLiteOpenHelper {
+//TODO: Work on Database, make sure everything is running a okay.
+public class DatabaseHelper extends AppCompatActivity {
     SQLiteDatabase db;
+    private Context context;
 
     public DatabaseHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
-        super(context, name, factory, version);
+        //TODO: Fix this part
+        //(name, context, factory, version)
     }
 
     //LogCat
@@ -20,7 +25,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 1;
 
     //DB Name
-    private static final String DATABASE_NAME = "planesmith";
+    private static final String DATABASE_NAME = "planesmith.db";
 
     //Table names
     private static final String TABLE_CHARACTERS = "characters";
@@ -50,6 +55,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static String KEY_WORLD_CONTENT = "world_content";
     private static String KEY_FOLDER = "Folder";
 
+
     //Table create
     private static final String CREATE_TABLE_CHARACTERS = "CREATE TABLE "
             + TABLE_CHARACTERS + "(" + KEY_ID + " INTEGER PRIMARY KEY,"
@@ -76,18 +82,20 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             + KEY_FOLDER + " TEXT,"
             + KEY_CREATED_AT + " DATETIME" + ")";
 
-    public DatabaseHelper(Context context) {
-        super(context, DATABASE_NAME, null, DATABASE_VERSION);
+    DatabaseHelper(@Nullable Context context) {
+        //TODO: Fix this too
+        //super(context, DATABASE_NAME, null, DATABASE_VERSION);
+        //this.context = context;
     }
 
-    @Override
+    //@Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         db.execSQL(CREATE_TABLE_WORLD);
         db.execSQL(CREATE_TABLE_CHARACTERS);
         db.execSQL(CREATE_TABLE_STORY);
     }
 
-    @Override
+    //@Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_WORLD);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_CHARACTERS);

@@ -3,17 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Administrator/Documents/Kuliah/planesmith/planesmith/app/src/main/res/layout/activity_main.xml" value="0.1796875" />
-        <entry key="..\:/Users/Administrator/Documents/Kuliah/planesmith/planesmith/app/src/main/res/layout/register_p.xml" value="0.1796875" />
-        <entry key="..\:/Users/Administrator/Documents/Kuliah/planesmith/planesmith/app/src/main/res/layout/story.xml" value="0.16666666666666666" />
-        <entry key="..\:/Users/Administrator/Documents/Kuliah/planesmith/planesmith/app/src/main/res/layout/story_add.xml" value="0.16666666666666666" />
-        <entry key="..\:/Users/Administrator/Documents/Kuliah/planesmith/planesmith/app/src/main/res/layout/story_edit.xml" value="0.16666666666666666" />
-        <entry key="..\:/Users/Benjamin Tantra/Documents/GitHub/planesmith/planesmith/app/src/main/res/layout/activity_main.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/Benjamin Tantra/Documents/GitHub/planesmith/planesmith/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/Benjamin Tantra/Documents/GitHub/planesmith/planesmith/app/src/main/res/layout/character_add.xml" value="0.32998324958123953" />
+        <entry key="..\:/Users/Benjamin Tantra/Documents/GitHub/planesmith/planesmith/app/src/main/res/layout/character_edit.xml" value="0.33" />
+        <entry key="..\:/Users/Benjamin Tantra/Documents/GitHub/planesmith/planesmith/app/src/main/res/layout/character_entry.xml" value="0.5" />
         <entry key="..\:/Users/Benjamin Tantra/Documents/GitHub/planesmith/planesmith/app/src/main/res/layout/characters.xml" value="0.24094202898550723" />
+        <entry key="..\:/Users/Benjamin Tantra/Documents/GitHub/planesmith/planesmith/app/src/main/res/layout/story.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/Benjamin Tantra/Documents/GitHub/planesmith/planesmith/app/src/main/res/layout/story_add.xml" value="0.24094202898550723" />
+        <entry key="..\:/Users/Benjamin Tantra/Documents/GitHub/planesmith/planesmith/app/src/main/res/layout/story_edit.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/Benjamin Tantra/Documents/GitHub/planesmith/planesmith/app/src/main/res/layout/story_entry.xml" value="0.190625" />
+        <entry key="..\:/Users/Benjamin Tantra/Documents/GitHub/planesmith/planesmith/app/src/main/res/layout/table_entry.xml" value="0.33" />
         <entry key="..\:/Users/Benjamin Tantra/Documents/GitHub/planesmith/planesmith/app/src/main/res/layout/world.xml" value="0.2015625" />
         <entry key="..\:/Users/Benjamin Tantra/Documents/GitHub/planesmith/planesmith/app/src/main/res/layout/world_add.xml" value="0.22" />
+        <entry key="..\:/Users/Benjamin Tantra/Documents/GitHub/planesmith/planesmith/app/src/main/res/layout/world_edit.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/Benjamin Tantra/Documents/GitHub/planesmith/planesmith/app/src/main/res/layout/world_entry.xml" value="0.5" />
         <entry key="..\:/Users/Benjamin Tantra/Documents/UNI/Mobile Programmin/Lab/planesmith/app/src/main/res/layout/activity_main.xml" value="0.41041666666666665" />
         <entry key="..\:/Users/Benjamin Tantra/Documents/UNI/Mobile Programmin/Lab/planesmith/app/src/main/res/layout/character_add.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/Benjamin Tantra/Documents/UNI/Mobile Programmin/Lab/planesmith/app/src/main/res/layout/characters.xml" value="0.20520833333333333" />

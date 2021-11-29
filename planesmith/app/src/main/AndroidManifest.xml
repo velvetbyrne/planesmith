@@ -37,7 +37,6 @@
         <activity android:name=".Characters" />
         <activity android:name=".Story" />
         <activity android:name=".World" />
-        <activity android:name=".Register"/>
     </application>
 
 </manifest>

@@ -1,12 +1,12 @@
 package umn.ac.id.planesmith;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 public class Story extends AppCompatActivity {
     int id;
@@ -17,25 +17,25 @@ public class Story extends AppCompatActivity {
 
     private static final String TAG = "Story";
 
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.story);
-        Log.d(TAG, "oncreate: Starting.");
+        setContentView(R.layout.activity_story);
+        Log.d(TAG, "onCreate: Starting.");
 
-        Button addnew = (Button) findViewById(R.id.addnew);
+        Button addNew = (Button) findViewById(R.id.addButton);
 
-        addnew.setOnClickListener(new View.OnClickListener() {
+        addNew.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d(TAG, "onclick: AddNewStory");
+                Log.d(TAG, "onClick: AddNewStory");
 
-                Intent intent = new Intent(Story.this, Story_Add.class);
+                Intent intent = new Intent(Story.this, AddStory.class);
                 startActivity(intent);
 
 
             }
         });
-
     }
 
     public Story() {

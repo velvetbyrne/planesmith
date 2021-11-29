@@ -3,39 +3,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <RelativeLayout
-        android:id="@+id/header"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:background="#ccc"
-        android:gravity="start"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:fontFamily="sans-serif-smallcaps"
-            android:text="@string/characters"
-            android:textColor="#000"
-            android:textSize="25sp" />
-    </RelativeLayout>
+    android:layout_height="match_parent"
+    tools:context=".EditCharacter">
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="680dp"
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/header">
-
+        app:layout_constraintTop_toTopOf="parent">
 
         <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="5dp">
+            android:layout_height="wrap_content">
 
             <TableRow
                 android:layout_height="match_parent"
@@ -66,7 +52,7 @@
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/character_name"
+                    android:id="@+id/character_name2"
                     android:layout_width="341dp"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -88,7 +74,7 @@
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/character_age"
+                    android:id="@+id/character_age2"
                     android:layout_width="341dp"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -109,7 +95,7 @@
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/character_height"
+                    android:id="@+id/character_height2"
                     android:layout_width="341dp"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -130,7 +116,7 @@
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/character_weight"
+                    android:id="@+id/character_weight2"
                     android:layout_width="341dp"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -151,7 +137,7 @@
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/character_gender"
+                    android:id="@+id/character_gender2"
                     android:layout_width="341dp"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -172,7 +158,7 @@
                     android:textSize="16sp" />
 
                 <EditText
-                    android:id="@+id/character_group"
+                    android:id="@+id/character_group2"
                     android:layout_width="341dp"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -192,6 +178,7 @@
                     android:layout_span="2"
                     android:background="@null"
                     android:ems="10"
+                    android:paddingTop="10dp"
                     android:gravity="start|top"
                     android:hint="@string/character_details"
                     android:inputType="textMultiLine"
@@ -200,5 +187,18 @@
             </TableRow>
         </TableLayout>
     </ScrollView>
+
+    <Button
+        android:id="@+id/update_character"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/update"
+        app:layout_constraintBottom_toTopOf="@+id/delete_character"/>
+    <Button
+        android:id="@+id/delete_character"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/delete"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

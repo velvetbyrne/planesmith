@@ -17,18 +17,18 @@ public class World extends AppCompatActivity {
 
     private static final String TAG = "World";
 
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.world);
-        Log.d(TAG, "oncreate: Starting.");
-        Button addnew = (Button) findViewById(R.id.addnew);
+        setContentView(R.layout.activity_world);
+        Button addNew = (Button) findViewById(R.id.addButton);
 
-        addnew.setOnClickListener(new View.OnClickListener() {
+        addNew.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d(TAG, "onclick: AddNewStory");
+                Log.d(TAG, "onClick: AddNewWorld");
 
-                Intent intent = new Intent(World.this, World_Add.class);
+                Intent intent = new Intent(World.this, AddWorld.class);
                 startActivity(intent);
 
 
