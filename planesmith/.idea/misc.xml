@@ -3,12 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Benjamin Tantra/Documents/UNI/Mobile Programmin/Lab/planesmith/app/src/main/res/layout/activity_add_character.xml" value="0.19427083333333334" />
+        <entry key="..\:/Users/Benjamin Tantra/Documents/UNI/Mobile Programmin/Lab/planesmith/app/src/main/res/layout/activity_add_character.xml" value="0.33" />
         <entry key="..\:/Users/Benjamin Tantra/Documents/UNI/Mobile Programmin/Lab/planesmith/app/src/main/res/layout/activity_add_story.xml" value="0.18020833333333333" />
-        <entry key="..\:/Users/Benjamin Tantra/Documents/UNI/Mobile Programmin/Lab/planesmith/app/src/main/res/layout/activity_add_world.xml" value="0.19427083333333334" />
+        <entry key="..\:/Users/Benjamin Tantra/Documents/UNI/Mobile Programmin/Lab/planesmith/app/src/main/res/layout/activity_add_world.xml" value="0.33" />
         <entry key="..\:/Users/Benjamin Tantra/Documents/UNI/Mobile Programmin/Lab/planesmith/app/src/main/res/layout/activity_character_add.xml" value="0.19427083333333334" />
         <entry key="..\:/Users/Benjamin Tantra/Documents/UNI/Mobile Programmin/Lab/planesmith/app/src/main/res/layout/activity_characters.xml" value="0.2536231884057971" />
         <entry key="..\:/Users/Benjamin Tantra/Documents/UNI/Mobile Programmin/Lab/planesmith/app/src/main/res/layout/activity_database_helper.xml" value="0.19427083333333334" />
+        <entry key="..\:/Users/Benjamin Tantra/Documents/UNI/Mobile Programmin/Lab/planesmith/app/src/main/res/layout/activity_edit_character.xml" value="0.190625" />
+        <entry key="..\:/Users/Benjamin Tantra/Documents/UNI/Mobile Programmin/Lab/planesmith/app/src/main/res/layout/activity_edit_story.xml" value="0.190625" />
+        <entry key="..\:/Users/Benjamin Tantra/Documents/UNI/Mobile Programmin/Lab/planesmith/app/src/main/res/layout/activity_edit_world.xml" value="0.19427083333333334" />
         <entry key="..\:/Users/Benjamin Tantra/Documents/UNI/Mobile Programmin/Lab/planesmith/app/src/main/res/layout/activity_main.xml" value="0.28306159420289856" />
         <entry key="..\:/Users/Benjamin Tantra/Documents/UNI/Mobile Programmin/Lab/planesmith/app/src/main/res/layout/activity_story.xml" value="0.2536231884057971" />
         <entry key="..\:/Users/Benjamin Tantra/Documents/UNI/Mobile Programmin/Lab/planesmith/app/src/main/res/layout/activity_world.xml" value="0.33" />

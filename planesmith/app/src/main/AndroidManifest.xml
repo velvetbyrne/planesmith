@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Planesmith">
         <activity
+            android:name=".EditWorld"
+            android:exported="false" />
+        <activity
+            android:name=".EditStory"
+            android:exported="false" />
+        <activity
+            android:name=".EditCharacter"
+            android:exported="false" />
+        <activity
             android:name=".AddWorld"
             android:exported="false" />
         <activity

@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
+    //TODO: Check for compatibility issues for UI
+    //TODO: Final check before submission
 
     private static final String TAG = "MainActivity";
 

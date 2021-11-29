@@ -10,7 +10,7 @@ import android.widget.EditText;
 public class AddCharacter extends AppCompatActivity {
 
     EditText character_name, character_age, character_height, character_weight, character_gender, character_group;
-    Button save_character;
+    Button add_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +23,12 @@ public class AddCharacter extends AppCompatActivity {
         character_weight = findViewById(R.id.character_weight);
         character_gender = findViewById(R.id.character_gender);
         character_group = findViewById(R.id.character_group);
-        //TODO: Button to save data. Saved data goes into character database.
+        add_button = findViewById(R.id.save_character);
+        add_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //TODO: Add save button. Save data goes into Character database.
+            }
+        });
     }
 }

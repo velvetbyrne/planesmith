@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 
-//TODO: Work on Database
+//TODO: Work on Database, make sure everything is running a okay.
 public class DatabaseHelper extends AppCompatActivity {
     SQLiteDatabase db;
 

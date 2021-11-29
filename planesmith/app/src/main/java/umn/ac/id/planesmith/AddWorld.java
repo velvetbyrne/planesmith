@@ -10,7 +10,7 @@ import android.os.Bundle;
 public class AddWorld extends AppCompatActivity {
 
     EditText world_name, world_detail;
-    Button save_world;
+    Button add_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +19,12 @@ public class AddWorld extends AppCompatActivity {
 
         world_name = findViewById(R.id.world_name);
         world_detail = findViewById(R.id.world_detail);
-        //TODO: Button to save data. Saved items go into the world database.
+        add_button = findViewById(R.id.save_world);
+        add_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //TODO: Add save button. Save data goes into World database.
+            }
+        });
     }
 }

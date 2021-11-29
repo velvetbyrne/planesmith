@@ -10,7 +10,7 @@ import android.widget.EditText;
 public class AddStory extends AppCompatActivity {
 
     EditText chapter_name, chapter_details;
-    Button save_story;
+    Button add_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +19,12 @@ public class AddStory extends AppCompatActivity {
 
         chapter_name = findViewById(R.id.chapter_name);
         chapter_details = findViewById(R.id.chapter_detail);
-        //TODO: Add save button. Save data goes into Story database.
+        add_button = findViewById(R.id.save_story);
+        add_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //TODO: Add save button. Save data goes into Story database.
+            }
+        });
     }
 }
