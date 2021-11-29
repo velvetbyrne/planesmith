@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Planesmith">
         <activity
+            android:name=".CustomAdapter"
+            android:exported="false" />
+        <activity
             android:name=".EditWorld"
             android:exported="false" />
         <activity

@@ -25,6 +25,8 @@ public class AddWorld extends AppCompatActivity {
             public void onClick(View view) {
                 //TODO: Add save button. Save data goes into World database.
                 DatabaseHelper myDB = new DatabaseHelper(AddWorld.this);
+                myDB.addWorld(world_name.getText().toString().trim(),
+                        world_detail.getText().toString().trim());
             }
         });
     }
