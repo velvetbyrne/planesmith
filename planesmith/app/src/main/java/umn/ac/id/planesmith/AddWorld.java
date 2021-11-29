@@ -24,6 +24,7 @@ public class AddWorld extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //TODO: Add save button. Save data goes into World database.
+                DatabaseHelper myDB = new DatabaseHelper(AddWorld.this);
             }
         });
     }

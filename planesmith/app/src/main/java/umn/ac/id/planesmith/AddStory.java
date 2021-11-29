@@ -23,7 +23,8 @@ public class AddStory extends AppCompatActivity {
         add_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //TODO: Add save button. Save data goes into Story database.
+                //TODO: Add Save Button. Save data goes into Story database.
+                DatabaseHelper myDB = new DatabaseHelper(AddStory.this);
             }
         });
     }

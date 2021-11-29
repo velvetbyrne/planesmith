@@ -28,6 +28,7 @@ public class AddCharacter extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //TODO: Add save button. Save data goes into Character database.
+                DatabaseHelper myDB = new DatabaseHelper(AddCharacter.this);
             }
         });
     }

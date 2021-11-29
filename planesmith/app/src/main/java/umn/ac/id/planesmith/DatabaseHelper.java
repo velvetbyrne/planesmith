@@ -11,9 +11,11 @@ import android.os.Bundle;
 //TODO: Work on Database, make sure everything is running a okay.
 public class DatabaseHelper extends AppCompatActivity {
     SQLiteDatabase db;
+    private Context context;
 
     public DatabaseHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
-        //(name, context, factory, version);
+        //TODO: Fix this part
+        //(name, context, factory, version)
     }
 
     //LogCat
@@ -23,7 +25,7 @@ public class DatabaseHelper extends AppCompatActivity {
     private static final int DATABASE_VERSION = 1;
 
     //DB Name
-    private static final String DATABASE_NAME = "planesmith";
+    private static final String DATABASE_NAME = "planesmith.db";
 
     //Table names
     private static final String TABLE_CHARACTERS = "characters";
@@ -53,6 +55,7 @@ public class DatabaseHelper extends AppCompatActivity {
     private static String KEY_WORLD_CONTENT = "world_content";
     private static String KEY_FOLDER = "Folder";
 
+
     //Table create
     private static final String CREATE_TABLE_CHARACTERS = "CREATE TABLE "
             + TABLE_CHARACTERS + "(" + KEY_ID + " INTEGER PRIMARY KEY,"
@@ -79,8 +82,10 @@ public class DatabaseHelper extends AppCompatActivity {
             + KEY_FOLDER + " TEXT,"
             + KEY_CREATED_AT + " DATETIME" + ")";
 
-    public DatabaseHelper(Context context) {
+    DatabaseHelper(@Nullable Context context) {
+        //TODO: Fix this too
         //super(context, DATABASE_NAME, null, DATABASE_VERSION);
+        //this.context = context;
     }
 
     //@Override
