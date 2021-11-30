@@ -61,7 +61,7 @@
 
                 <EditText
                     android:id="@+id/character_name"
-                    android:layout_width="341dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="textPersonName"
@@ -83,7 +83,7 @@
 
                 <EditText
                     android:id="@+id/character_age"
-                    android:layout_width="341dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="textPersonName"
@@ -104,7 +104,7 @@
 
                 <EditText
                     android:id="@+id/character_height"
-                    android:layout_width="341dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="textPersonName"
@@ -125,7 +125,7 @@
 
                 <EditText
                     android:id="@+id/character_weight"
-                    android:layout_width="341dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="textPersonName"
@@ -146,7 +146,7 @@
 
                 <EditText
                     android:id="@+id/character_gender"
-                    android:layout_width="341dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="textPersonName"
@@ -167,7 +167,7 @@
 
                 <EditText
                     android:id="@+id/character_group"
-                    android:layout_width="341dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="textPersonName"
@@ -181,7 +181,7 @@
                 <EditText
                     android:id="@+id/character_detail"
                     style="@style/Widget.AppCompat.AutoCompleteTextView"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_span="2"
                     android:background="@null"
