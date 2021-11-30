@@ -33,7 +33,7 @@
 
                 <EditText
                     android:id="@+id/chapter_name"
-                    android:layout_width="410dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:fontFamily="sans-serif-medium"
