@@ -19,13 +19,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TableLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
 
-            <TableRow
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_height="match_parent"
-                android:layout_width="match_parent" >
+                android:layout_width="match_parent"
+                android:paddingBottom="50px"
+                android:paddingTop="30px">
 
                 <ImageView
                     android:id="@+id/character_portrait"
@@ -33,10 +37,14 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_span="2"
-                    tools:layout_editor_absoluteX="139dp"
-                    tools:layout_editor_absoluteY="58dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0"
                     tools:srcCompat="@tools:sample/avatars" />
-            </TableRow>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TableRow
                 android:layout_width="match_parent"
@@ -185,7 +193,7 @@
                     app:layout_constraintBottom_toBottomOf="parent" />
 
             </TableRow>
-        </TableLayout>
+        </LinearLayout>
     </ScrollView>
 
     <Button
