@@ -25,6 +25,8 @@ public class AddStory extends AppCompatActivity {
             public void onClick(View view) {
                 //TODO: Add Save Button. Save data goes into Story database.
                 DatabaseHelper myDB = new DatabaseHelper(AddStory.this);
+                myDB.addStory(chapter_name.getText().toString().trim(),
+                        chapter_details.getText().toString().trim());
             }
         });
     }

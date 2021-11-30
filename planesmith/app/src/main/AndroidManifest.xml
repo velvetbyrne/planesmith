@@ -2,10 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="umn.ac.id.planesmith">
 
-    <uses-permission
-        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-        android:maxSdkVersion="18" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -14,16 +10,37 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Planesmith">
         <activity
-            android:name=".Character_Add"
+            android:name=".CustomAdapter"
             android:exported="false" />
         <activity
-            android:name=".World_Add"
+            android:name=".EditWorld"
             android:exported="false" />
         <activity
-            android:name=".Story_Add"
+            android:name=".EditStory"
             android:exported="false" />
         <activity
-            android:name=".StoryAdd"
+            android:name=".EditCharacter"
+            android:exported="false" />
+        <activity
+            android:name=".AddWorld"
+            android:exported="false" />
+        <activity
+            android:name=".AddStory"
+            android:exported="false" />
+        <activity
+            android:name=".AddCharacter"
+            android:exported="false" />
+        <activity
+            android:name=".DatabaseHelper"
+            android:exported="false" />
+        <activity
+            android:name=".Story"
+            android:exported="false" />
+        <activity
+            android:name=".Characters"
+            android:exported="false" />
+        <activity
+            android:name=".World"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
@@ -34,9 +51,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Characters" />
-        <activity android:name=".Story" />
-        <activity android:name=".World" />
     </application>
 
 </manifest>

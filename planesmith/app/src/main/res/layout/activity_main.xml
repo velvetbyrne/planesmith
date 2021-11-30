@@ -1,121 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    tools:context=".MainActivity">
 
-    <!-- Header aligned to top -->
-    <RelativeLayout
-        android:id="@+id/header"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:background="@color/colorAccent"
-        android:gravity="left">
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/headertext"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
-            android:fontFamily="sans-serif-smallcaps"
-            android:text="@string/app_name"
-            android:textColor="#000"
-            android:textSize="25sp" />
-    </RelativeLayout>
 
-    <RelativeLayout
-        android:id="@+id/landing_content"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="0dp">
-
-        //placeholder image
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/imageView3"
             android:layout_width="match_parent"
-            android:layout_height="223dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginBottom="16dp"
-            app:srcCompat="@drawable/ic_launcher_background" />
+            android:layout_height="wrap_content"
+            tools:srcCompat="@tools:sample/avatars"
+            />
 
         <TextView
-            android:id="@+id/encyclopedia"
-            android:layout_width="390dp"
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/imageView"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginEnd="206dp"
-            android:layout_marginBottom="-60dp"
-            android:paddingLeft="10dp"
-            android:fontFamily="sans-serif-light"
             android:text="@string/encyclopedia"
-            android:textColor="#000"
-            android:textSize="30sp" />
+            android:textColor="@color/black"
+            android:textSize="35sp" />
 
         <Button
             android:id="@+id/characters"
-            style="?android:attr/borderlessButtonStyle"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_alignBottom="@+id/encyclopedia"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="0dp"
-            android:layout_marginEnd="0dp"
-            android:layout_marginBottom="340dp"
-            android:onClick="onCharacterClicked"
-            android:text="@string/characters"
-            android:textAlignment="textStart"
-            android:textColor="#000"
-            android:textSize="15sp"
-            app:backgroundTint="@color/white" />
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:padding="15dp"
+            android:text="@string/character"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
 
         <Button
             android:id="@+id/world"
-            style="?android:attr/borderlessButtonStyle"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_alignBottom="@+id/characters"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="0dp"
-            android:layout_marginEnd="0dp"
-            android:layout_marginBottom="280dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:padding="15dp"
             android:text="@string/world"
-            android:textAlignment="textStart"
-            android:textColor="#000"
-            android:textSize="15sp"
-            app:backgroundTint="@color/white" />
+            android:textColor="@color/black"
+            android:textSize="17sp" />
 
         <Button
             android:id="@+id/story"
-            style="?android:attr/borderlessButtonStyle"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="0dp"
-            android:layout_marginEnd="0dp"
-            android:layout_marginBottom="220dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:padding="15dp"
             android:text="@string/story"
-            android:textAlignment="textStart"
-            android:textColor="#000"
-            android:textSize="15sp"
-            app:backgroundTint="@color/white" />
-
-
-    </RelativeLayout>
-
-
-    </RelativeLayout>
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

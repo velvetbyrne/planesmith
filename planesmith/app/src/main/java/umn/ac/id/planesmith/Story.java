@@ -1,6 +1,7 @@
 package umn.ac.id.planesmith;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,14 +9,38 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import java.util.ArrayList;
+
 public class Story extends AppCompatActivity {
+    private static final String TAG = "Story";
+    RecyclerView recyclerView;
+    FloatingActionButton add_button;
+    //CustomAdapter customAdapter; //TODO: Work on CustomAdapter.
+    DatabaseHelper myDB;
     int id;
     String chapter_name;
     String chapter_content;
     String arc;
     String created_at;
 
-    private static final String TAG = "Story";
+    public Story() {
+
+    }
+
+    public Story(String chapter_name, String chapter_content, String arc) {
+        this.chapter_name = chapter_name;
+        this.chapter_content = chapter_content;
+        this.arc = arc;
+    }
+
+    public Story(int id, String chapter_name, String chapter_content, String arc) {
+        this.id = id;
+        this.chapter_name = chapter_name;
+        this.chapter_content = chapter_content;
+        this.arc = arc;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,43 +63,12 @@ public class Story extends AppCompatActivity {
         });
     }
 
-    public Story() {
-
-    }
-
-    public Story(String chapter_name, String chapter_content) {
-        this.chapter_name = chapter_name;
-        this.chapter_content = chapter_content;
-    }
-
-    public Story(String chapter_name, String chapter_content, String arc) {
-        this.chapter_name = chapter_name;
-        this.chapter_content = chapter_content;
-        this.arc = arc;
-    }
-
-    public Story(int id, String chapter_name, String chapter_content, String arc) {
-        this.id = id;
-        this.chapter_name = chapter_name;
-        this.chapter_content = chapter_content;
-        this.arc = arc;
-    }
-
-    //setter
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public void setChapter_name(String chapter_name) {
         this.chapter_name = chapter_name;
     }
 
     public void setChapter_content (String chapter_content) {
         this.chapter_content = chapter_content;
-    }
-
-    public void setArc (String arc) {
-        this.arc = arc;
     }
 
     public void setCreatedAt(String created_at){
@@ -84,6 +78,11 @@ public class Story extends AppCompatActivity {
     //getter
     public long getId() {
         return this.id;
+    }
+
+    //setter
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getChapter_name (String chapter_name) {
@@ -96,5 +95,9 @@ public class Story extends AppCompatActivity {
 
     public String getArc() {
         return arc;
+    }
+
+    public void setArc (String arc) {
+        this.arc = arc;
     }
 }

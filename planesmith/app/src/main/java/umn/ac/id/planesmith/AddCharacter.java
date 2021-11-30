@@ -9,7 +9,7 @@ import android.widget.EditText;
 
 public class AddCharacter extends AppCompatActivity {
 
-    EditText character_name, character_age, character_height, character_weight, character_gender, character_group;
+    EditText character_name, character_age, character_height, character_weight, character_gender, character_group, character_content;
     Button add_button;
 
     @Override
@@ -23,12 +23,21 @@ public class AddCharacter extends AppCompatActivity {
         character_weight = findViewById(R.id.character_weight);
         character_gender = findViewById(R.id.character_gender);
         character_group = findViewById(R.id.character_group);
+        character_content = findViewById(R.id.character_detail);
         add_button = findViewById(R.id.save_character);
+
         add_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //TODO: Add save button. Save data goes into Character database.
                 DatabaseHelper myDB = new DatabaseHelper(AddCharacter.this);
+                myDB.addCharacter(character_name.getText().toString().trim(),
+                        character_age.getText().toString().trim(),
+                        character_height.getText().toString().trim(),
+                        character_weight.getText().toString().trim(),
+                        character_gender.getText().toString().trim(),
+                        character_group.getText().toString().trim(),
+                        character_content.getText().toString().trim());
             }
         });
     }
