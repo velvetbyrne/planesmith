@@ -153,6 +153,21 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     //UPDATE FUNCTIONS
     //TODO: Make Update functions.
 
+    void updateStory(String row_id, String chapter_title, String chapter_content){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put(KEY_CHAPTER_NAME, chapter_title);
+        cv.put(KEY_CHAPTER_CONTENT, chapter_content);
+
+        long result = db.update(TABLE_STORY, cv, "_id=?", new String[]{row_id});
+        if(result == -1){
+            Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show();
+        }else {
+            Toast.makeText(context, "Updated Successfully!", Toast.LENGTH_SHORT).show();
+        }
+
+    }
+
     //DELETE FUNCTIONS
     //TODO: Re-check functionality.
     void deleteStory(String id){
