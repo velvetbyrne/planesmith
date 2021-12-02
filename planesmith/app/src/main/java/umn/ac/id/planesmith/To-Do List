@@ -1,0 +1,18 @@
+This file details the list of remaining things to do
+
+> Clean up UI.
+
+> Database Work:
+    > Character data
+        > Save data
+        > Update data
+    > World data
+        > Save data
+        > Update data
+    > Story data
+        > Save data
+        > Update data
+
+> Layout testing
+    > Make sure display works on all platforms
+    > Work on light/dark theme.
