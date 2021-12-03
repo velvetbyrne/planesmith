@@ -6,7 +6,7 @@
     android:layout_margin="12dp">
 
     <TextView
-        android:id="@+id/item_story_name"
+        android:id="@+id/item_world_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Name"
@@ -14,12 +14,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/item_story_content"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Content"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

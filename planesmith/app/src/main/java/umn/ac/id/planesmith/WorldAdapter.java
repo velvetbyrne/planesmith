@@ -1,6 +1,5 @@
 package umn.ac.id.planesmith;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -46,7 +45,6 @@ public class WorldAdapter extends RecyclerView.Adapter<WorldAdapter.MyViewHolder
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             this.name = itemView.findViewById(R.id.item_world_name);
-            this.content = itemView.findViewById(R.id.item_world_content);
         }
     }
 }

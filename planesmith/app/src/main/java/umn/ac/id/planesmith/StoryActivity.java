@@ -31,7 +31,7 @@ public class StoryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_story);
         Button addNew = (Button) findViewById(R.id.addButton);
-        rvStory = findViewById(R.id.rv_world);
+        rvStory = findViewById(R.id.rv_story);
 
         addNew.setOnClickListener(v -> {
             Log.d(TAG, "onClick: AddNewStory");

@@ -1,6 +1,5 @@
 package umn.ac.id.planesmith;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,9 +16,7 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.MyViewHolder
 
     private ArrayList<Story> list;
 
-    StoryAdapter(ArrayList<Story> list){
-        this.list = list;
-    }
+    StoryAdapter(ArrayList<Story> list){ this.list = list; }
 
     @NonNull
     @Override
@@ -46,7 +43,6 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.MyViewHolder
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             this.name = itemView.findViewById(R.id.item_story_name);
-            this.content = itemView.findViewById(R.id.item_story_content);
         }
     }
 }

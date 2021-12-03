@@ -122,7 +122,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         cv.put(KEY_CHAPTER_NAME, chapter_name);
         cv.put(KEY_CHAPTER_CONTENT, chapter_content);
-        long result = db.insert(TABLE_WORLD, null, cv);
+        long result = db.insert(TABLE_STORY, null, cv);
         if (result == -1L) {
             Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show();
         } else {
@@ -141,7 +141,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         cv.put(KEY_CHARACTER_GENDER, character_gender);
         cv.put(KEY_CHARACTER_GROUP, character_group);
         cv.put(KEY_CHARACTER_CONTENT, character_content);
-        long result = db.insert(TABLE_WORLD, null, cv);
+        long result = db.insert(TABLE_CHARACTERS, null, cv);
         if (result == -1) {
             Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show();
         } else {

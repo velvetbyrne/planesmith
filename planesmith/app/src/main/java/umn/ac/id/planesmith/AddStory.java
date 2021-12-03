@@ -22,11 +22,11 @@ public class AddStory extends AppCompatActivity {
         chapter_details = findViewById(R.id.chapter_detail);
         add_button = findViewById(R.id.save_story);
         add_button.setOnClickListener(v -> {
-            //TODO: Add save button. Save data goes into World database.
+            //TODO: Add save button. Save data goes into Story database.
             DatabaseHelper myDB = new DatabaseHelper(getApplicationContext());
-            myDB.addWorld(chapter_name.getText().toString().trim(),
+            myDB.addStory(chapter_name.getText().toString().trim(),
                     chapter_details.getText().toString().trim());
-            Intent goBack = new Intent(this, WorldActivity.class);
+            Intent goBack = new Intent(this, StoryActivity.class);
             goBack.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             this.startActivity(goBack);
         });
