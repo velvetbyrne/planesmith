@@ -10,47 +10,45 @@ import android.widget.Toast;
 
 //TODO: Work on Database, make sure everything is running a okay.
 public class DatabaseHelper extends SQLiteOpenHelper {
-    SQLiteDatabase db;
-    private Context context;
+    //    SQLiteDatabase db;
+    Context context;
 
     //LogCat
-    private static final String LOG = "DatabaseHelper";
+    static final String LOG = "DatabaseHelper";
 
     //Version
-    private static final int DATABASE_VERSION = 1;
+    static final int DATABASE_VERSION = 1;
 
     //DB Name
-    private static final String DATABASE_NAME = "planesmith.db";
+    static final String DATABASE_NAME = "planesmith.db";
 
     //Table names
-    private static final String TABLE_CHARACTERS = "characters";
-    private static final String TABLE_WORLD = "world";
-    private static final String TABLE_STORY = "story";
+    static final String TABLE_CHARACTERS = "characters";
+    static final String TABLE_WORLD = "world";
+    static final String TABLE_STORY = "story";
 
     //common column names
-    private static final String KEY_ID = "id";
-    private static final String KEY_CREATED_AT = "created_at";
+    static final String KEY_ID = "id";
+    static final String KEY_CREATED_AT = "created_at";
 
     //Character Columns
-    private static final String KEY_CHARACTER_NAME = "character_name";
-    private static final String KEY_CHARACTER_AGE = "character_age";
-    private static final String KEY_CHARACTER_HEIGHT = "character_height";
-    private static final String KEY_CHARACTER_WEIGHT = "character_weight";
-    private static final String KEY_CHARACTER_GENDER = "character_gender";
-    private static final String KEY_CHARACTER_CONTENT = "character_content";
-    private static final String KEY_CHARACTER_GROUP = "character_group";
-    private static final String KEY_CHARACTER_DETAIL = "character_detail";
+    static final String KEY_CHARACTER_NAME = "character_name";
+    static final String KEY_CHARACTER_AGE = "character_age";
+    static final String KEY_CHARACTER_HEIGHT = "character_height";
+    static final String KEY_CHARACTER_WEIGHT = "character_weight";
+    static final String KEY_CHARACTER_GENDER = "character_gender";
+    static final String KEY_CHARACTER_CONTENT = "character_content";
+    static final String KEY_CHARACTER_GROUP = "character_group";
 
     //Story Columns
-    private static String KEY_CHAPTER_NAME = "chapter_name";
-    private static String KEY_CHAPTER_CONTENT = "chapter_content";
-    private static String KEY_ARC = "arc";
+    static final String KEY_CHAPTER_NAME = "chapter_name";
+    static final String KEY_CHAPTER_CONTENT = "chapter_content";
+    static final String KEY_ARC = "arc";
 
     //World Columns
-    private static String KEY_WORLD_NAME = "world_name";
-    private static String KEY_WORLD_CONTENT = "world_content";
-    private static String KEY_FOLDER = "Folder";
-
+    static final String KEY_WORLD_NAME = "world_name";
+    static final String KEY_WORLD_CONTENT = "world_content";
+    static final String KEY_FOLDER = "Folder";
 
     //Table create
     private static final String CREATE_TABLE_CHARACTERS = "CREATE TABLE "
@@ -72,7 +70,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             + KEY_CREATED_AT + " DATETIME" + ")";
 
     private static final String CREATE_TABLE_WORLD = "CREATE TABLE "
-            + TABLE_WORLD + "(" + KEY_ID + " INTEGER PRIMARY KEY,"
+            + TABLE_WORLD + "("
+            + KEY_ID + " INTEGER PRIMARY KEY,"
             + KEY_WORLD_NAME + " TEXT,"
             + KEY_WORLD_CONTENT + " TEXT,"
             + KEY_FOLDER + " TEXT,"
@@ -85,18 +84,18 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     //@Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        db.execSQL(CREATE_TABLE_WORLD);
-        db.execSQL(CREATE_TABLE_CHARACTERS);
-        db.execSQL(CREATE_TABLE_STORY);
+        sqLiteDatabase.execSQL(CREATE_TABLE_WORLD);
+        sqLiteDatabase.execSQL(CREATE_TABLE_CHARACTERS);
+        sqLiteDatabase.execSQL(CREATE_TABLE_STORY);
     }
 
     //@Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
-        db.execSQL("DROP TABLE IF EXISTS " + TABLE_WORLD);
-        db.execSQL("DROP TABLE IF EXISTS " + TABLE_CHARACTERS);
-        db.execSQL("DROP TABLE IF EXISTS " + TABLE_STORY);
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE_WORLD);
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE_CHARACTERS);
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE_STORY);
 
-        onCreate(db);
+        onCreate(sqLiteDatabase);
     }
 
     //TODO: Test-run
@@ -109,10 +108,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         cv.put(KEY_WORLD_NAME, world_name);
         cv.put(KEY_WORLD_CONTENT, world_content);
-        long result = db.insert(TABLE_WORLD,null,cv);
-        if(result == -1){
+        long result = db.insert(TABLE_WORLD, null, cv);
+        if (result == -1L) {
             Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show();
-        }else {
+        } else {
             Toast.makeText(context, "Added Successfully!", Toast.LENGTH_SHORT).show();
         }
     }
@@ -123,10 +122,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         cv.put(KEY_CHAPTER_NAME, chapter_name);
         cv.put(KEY_CHAPTER_CONTENT, chapter_content);
-        long result = db.insert(TABLE_WORLD,null,cv);
-        if(result == -1){
+        long result = db.insert(TABLE_WORLD, null, cv);
+        if (result == -1L) {
             Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show();
-        }else {
+        } else {
             Toast.makeText(context, "Added Successfully!", Toast.LENGTH_SHORT).show();
         }
     }
@@ -142,10 +141,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         cv.put(KEY_CHARACTER_GENDER, character_gender);
         cv.put(KEY_CHARACTER_GROUP, character_group);
         cv.put(KEY_CHARACTER_CONTENT, character_content);
-        long result = db.insert(TABLE_WORLD,null,cv);
-        if(result == -1){
+        long result = db.insert(TABLE_WORLD, null, cv);
+        if (result == -1) {
             Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show();
-        }else {
+        } else {
             Toast.makeText(context, "Added Successfully!", Toast.LENGTH_SHORT).show();
         }
     }
@@ -153,16 +152,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     //UPDATE FUNCTIONS
     //TODO: Make Update functions.
 
-    void updateStory(String row_id, String chapter_title, String chapter_content){
+    void updateStory(String row_id, String chapter_title, String chapter_content) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
         cv.put(KEY_CHAPTER_NAME, chapter_title);
         cv.put(KEY_CHAPTER_CONTENT, chapter_content);
 
         long result = db.update(TABLE_STORY, cv, "_id=?", new String[]{row_id});
-        if(result == -1){
+        if (result == -1) {
             Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show();
-        }else {
+        } else {
             Toast.makeText(context, "Updated Successfully!", Toast.LENGTH_SHORT).show();
         }
 
@@ -170,32 +169,32 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     //DELETE FUNCTIONS
     //TODO: Re-check functionality.
-    void deleteStory(String id){
+    void deleteStory(String id) {
         SQLiteDatabase db = this.getWritableDatabase();
         long result = db.delete(TABLE_STORY, "id=?", new String[]{id});
-        if(result == -1){
+        if (result == -1) {
             Toast.makeText(context, "Failed to Delete.", Toast.LENGTH_SHORT).show();
-        }else{
+        } else {
             Toast.makeText(context, "Successfully Deleted.", Toast.LENGTH_SHORT).show();
         }
     }
 
-    void deleteWorld(String id){
+    void deleteWorld(String id) {
         SQLiteDatabase db = this.getWritableDatabase();
         long result = db.delete(TABLE_WORLD, "id=?", new String[]{id});
-        if(result == -1){
+        if (result == -1) {
             Toast.makeText(context, "Failed to Delete.", Toast.LENGTH_SHORT).show();
-        }else{
+        } else {
             Toast.makeText(context, "Successfully Deleted.", Toast.LENGTH_SHORT).show();
         }
     }
 
-    void deleteCharacter(String id){
+    void deleteCharacter(String id) {
         SQLiteDatabase db = this.getWritableDatabase();
         long result = db.delete(TABLE_CHARACTERS, "id=?", new String[]{id});
-        if(result == -1){
+        if (result == -1) {
             Toast.makeText(context, "Failed to Delete.", Toast.LENGTH_SHORT).show();
-        }else{
+        } else {
             Toast.makeText(context, "Successfully Deleted.", Toast.LENGTH_SHORT).show();
         }
     }

@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Log.d(TAG, "onClick: World.");
 
-                Intent intent = new Intent(MainActivity.this, World.class);
+                Intent intent = new Intent(MainActivity.this, WorldActivity.class);
                 startActivity(intent);
             }
         });
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Log.d(TAG, "onclick: Story.");
 
-                Intent intent = new Intent(MainActivity.this, Story.class);
+                Intent intent = new Intent(MainActivity.this, StoryActivity.class);
                 startActivity(intent);
             }
         });

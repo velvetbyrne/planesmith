@@ -10,9 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Planesmith">
         <activity
-            android:name=".CustomAdapter"
-            android:exported="false" />
-        <activity
             android:name=".EditWorld"
             android:exported="false" />
         <activity
@@ -34,13 +31,13 @@
             android:name=".DatabaseHelper"
             android:exported="false" />
         <activity
-            android:name=".Story"
+            android:name=".StoryActivity"
             android:exported="false" />
         <activity
             android:name=".Characters"
             android:exported="false" />
         <activity
-            android:name=".World"
+            android:name=".WorldActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

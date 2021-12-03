@@ -2,6 +2,7 @@ package umn.ac.id.planesmith;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -20,14 +21,14 @@ public class AddStory extends AppCompatActivity {
         chapter_name = findViewById(R.id.chapter_name);
         chapter_details = findViewById(R.id.chapter_detail);
         add_button = findViewById(R.id.save_story);
-        add_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //TODO: Add Save Button. Save data goes into Story database.
-                DatabaseHelper myDB = new DatabaseHelper(AddStory.this);
-                myDB.addStory(chapter_name.getText().toString().trim(),
-                        chapter_details.getText().toString().trim());
-            }
+        add_button.setOnClickListener(v -> {
+            //TODO: Add save button. Save data goes into World database.
+            DatabaseHelper myDB = new DatabaseHelper(getApplicationContext());
+            myDB.addWorld(chapter_name.getText().toString().trim(),
+                    chapter_details.getText().toString().trim());
+            Intent goBack = new Intent(this, WorldActivity.class);
+            goBack.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            this.startActivity(goBack);
         });
     }
 }

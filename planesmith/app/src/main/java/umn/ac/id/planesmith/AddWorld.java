@@ -2,7 +2,7 @@ package umn.ac.id.planesmith;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.view.View;
+import android.content.Intent;
 import android.widget.Button;
 import android.widget.EditText;
 import android.os.Bundle;
@@ -20,14 +20,14 @@ public class AddWorld extends AppCompatActivity {
         world_name = findViewById(R.id.world_name);
         world_detail = findViewById(R.id.world_detail);
         add_button = findViewById(R.id.save_world);
-        add_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //TODO: Add save button. Save data goes into World database.
-                DatabaseHelper myDB = new DatabaseHelper(AddWorld.this);
-                myDB.addWorld(world_name.getText().toString().trim(),
-                        world_detail.getText().toString().trim());
-            }
+        add_button.setOnClickListener(v -> {
+            //TODO: Add save button. Save data goes into World database.
+            DatabaseHelper myDB = new DatabaseHelper(getApplicationContext());
+            myDB.addWorld(world_name.getText().toString().trim(),
+                    world_detail.getText().toString().trim());
+            Intent goBack = new Intent(this, WorldActivity.class);
+            goBack.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            this.startActivity(goBack);
         });
     }
 }

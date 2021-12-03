@@ -30,10 +30,10 @@ public class EditStory extends AppCompatActivity {
         update_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                DatabaseHelper myDB = new DatabaseHelper(updateStory.this);
-                chapter_title = chapter_name.getText().toString().trim();
-                chapter_content = chapter_details.getText().toString().trim();
-                myDB.updateStory(chapter_title, chapter_content);
+//                DatabaseHelper myDB = new DatabaseHelper(updateStory.this);
+//                chapter_title = chapter_name.getText().toString().trim();
+//                chapter_content = chapter_details.getText().toString().trim();
+//                myDB.updateStory(chapter_title, chapter_content);
             }
         });
 
