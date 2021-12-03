@@ -1,6 +1,5 @@
 package umn.ac.id.planesmith;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,26 +10,26 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-import umn.ac.id.planesmith.data.World;
+import umn.ac.id.planesmith.data.Character;
 
-public class WorldAdapter extends RecyclerView.Adapter<WorldAdapter.MyViewHolder> {
+public class CharacterAdapter extends RecyclerView.Adapter<CharacterAdapter.MyViewHolder> {
 
-    private ArrayList<World> list;
+    private ArrayList<Character> list;
 
-    WorldAdapter(ArrayList<World> list){
+    CharacterAdapter(ArrayList<Character> list) {
         this.list = list;
     }
 
     @NonNull
     @Override
-    public WorldAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_world, parent, false);
+    public CharacterAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_story, parent, false);
         return new MyViewHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull WorldAdapter.MyViewHolder holder, int position) {
-        holder.name.setText(list.get(position).getWorld_name());
+    public void onBindViewHolder(@NonNull CharacterAdapter.MyViewHolder holder, int position) {
+        holder.name.setText(list.get(position).getCharacter_name());
     }
 
     @Override
@@ -44,7 +43,7 @@ public class WorldAdapter extends RecyclerView.Adapter<WorldAdapter.MyViewHolder
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            this.name = itemView.findViewById(R.id.item_world_name);
+            this.name = itemView.findViewById(R.id.item_character_name);
         }
     }
 }

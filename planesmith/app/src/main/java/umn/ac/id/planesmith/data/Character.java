@@ -1,52 +1,11 @@
-package umn.ac.id.planesmith;
+package umn.ac.id.planesmith.data;
 
-import androidx.appcompat.app.AppCompatActivity;
+public class Character {
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
-import android.widget.Button;
-
-public class Characters extends AppCompatActivity {
+    private String character_name, character_age, character_height, character_weight, character_gender, character_content, character_group;
     int id;
-    String character_name;
-    String character_age;
-    String character_height;
-    String character_weight;
-    String character_gender;
-    String character_content;
-    String character_group;
-    String created_at;
 
-    private static final String TAG = "Characters";
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_characters);
-        Log.d(TAG, "onCreate: Starting.");
-
-        Button addButton = (Button) findViewById(R.id.addButton);
-
-        addButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.d(TAG, "onclick: AddNewCharacter");
-
-                Intent intent = new Intent(Characters.this, AddCharacter.class);
-                startActivity(intent);
-
-            }
-        });
-
-
-    }
-
-    public Characters () {
-    }
-
-    public Characters (String character_name, String character_content, String character_age, String character_gender, String character_weight, String character_height, String character_group) {
+    public Character (String character_name, String character_content, String character_age, String character_gender, String character_weight, String character_height, String character_group) {
         this.character_name = character_name;
         this.character_content = character_content;
         this.character_age = character_age;
@@ -56,7 +15,7 @@ public class Characters extends AppCompatActivity {
         this.character_group = character_group;
     }
 
-    public Characters (int id, String character_name, String character_content, String character_age, String character_gender, String character_weight, String character_height, String character_group) {
+    public Character (int id, String character_name, String character_content, String character_age, String character_gender, String character_weight, String character_height, String character_group) {
         this.id = id;
         this.character_name = character_name;
         this.character_content = character_content;
@@ -98,10 +57,6 @@ public class Characters extends AppCompatActivity {
 
     public void setCharacter_group (String character_group) {
         this.character_group = character_group;
-    }
-
-    public void setCreatedAt(String created_at){
-        this.created_at = created_at;
     }
 
     //getter

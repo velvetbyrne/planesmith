@@ -1,6 +1,7 @@
 package umn.ac.id.planesmith.data;
 
 public class Story {
+
     private String chapter_name, chapter_content, arc;
     int id;
 

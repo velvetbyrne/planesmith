@@ -16,7 +16,9 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.MyViewHolder
 
     private ArrayList<Story> list;
 
-    StoryAdapter(ArrayList<Story> list){ this.list = list; }
+    StoryAdapter(ArrayList<Story> list) {
+        this.list = list;
+    }
 
     @NonNull
     @Override
@@ -28,7 +30,6 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.MyViewHolder
     @Override
     public void onBindViewHolder(@NonNull StoryAdapter.MyViewHolder holder, int position) {
         holder.name.setText(list.get(position).getChapter_name());
-        holder.content.setText(list.get(position).getChapter_content());
     }
 
     @Override
@@ -38,7 +39,7 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.MyViewHolder
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView name, content;
+        TextView name;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);

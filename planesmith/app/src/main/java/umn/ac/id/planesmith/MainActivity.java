@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Log.d(TAG, "onClick: Characters.");
 
-                Intent intent = new Intent(MainActivity.this, Characters.class);
+                Intent intent = new Intent(MainActivity.this, CharacterActivity.class);
                 startActivity(intent);
 
             }
