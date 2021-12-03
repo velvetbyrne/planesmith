@@ -8,7 +8,7 @@ import static umn.ac.id.planesmith.DatabaseHelper.KEY_CHARACTER_HEIGHT;
 import static umn.ac.id.planesmith.DatabaseHelper.KEY_CHARACTER_NAME;
 import static umn.ac.id.planesmith.DatabaseHelper.KEY_CHARACTER_WEIGHT;
 import static umn.ac.id.planesmith.DatabaseHelper.KEY_ID;
-import static umn.ac.id.planesmith.DatabaseHelper.TABLE_CHARACTER;
+import static umn.ac.id.planesmith.DatabaseHelper.TABLE_CHARACTERS;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -29,7 +29,7 @@ public class CharacterActivity extends AppCompatActivity {
 
     private RecyclerView rvCharacter;
 
-    private static final String TAG = "Character";
+    private static final String TAG = "Characters";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,7 +49,7 @@ public class CharacterActivity extends AppCompatActivity {
         DatabaseHelper dbHelper = new DatabaseHelper(this);
         SQLiteDatabase db = dbHelper.getReadableDatabase();
         String[] projection = {KEY_ID, KEY_CHARACTER_NAME, KEY_CHARACTER_AGE, KEY_CHARACTER_HEIGHT, KEY_CHARACTER_WEIGHT, KEY_CHARACTER_GENDER, KEY_CHARACTER_GROUP, KEY_CHARACTER_CONTENT};
-        Cursor cursor = db.query(TABLE_CHARACTER, projection, null, null, null, null, null);
+        Cursor cursor = db.query(TABLE_CHARACTERS, projection, null, null, null, null, null);
 
         int idColumnIndex = cursor.getColumnIndexOrThrow(KEY_ID);
         int nameColumnIndex = cursor.getColumnIndexOrThrow(KEY_CHARACTER_NAME);
@@ -63,7 +63,7 @@ public class CharacterActivity extends AppCompatActivity {
         ArrayList<Character> listCharacter = new ArrayList<>();
 
         while(cursor.moveToNext()){
-            Log.d("Character", cursor.getString(nameColumnIndex));
+            Log.d("Characters", cursor.getString(nameColumnIndex));
             int id = cursor.getInt(idColumnIndex);
             String name = cursor.getString(nameColumnIndex);
             String age = cursor.getString(ageColumnIndex);

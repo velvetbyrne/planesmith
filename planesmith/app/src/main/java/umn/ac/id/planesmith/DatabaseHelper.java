@@ -23,7 +23,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     static final String DATABASE_NAME = "planesmith.db";
 
     //Table names
-    static final String TABLE_CHARACTER = "character";
+    static final String TABLE_CHARACTERS = "character";
     static final String TABLE_WORLD = "world";
     static final String TABLE_STORY = "story";
 
@@ -51,8 +51,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     static final String KEY_FOLDER = "Folder";
 
     //Table create
-    private static final String CREATE_TABLE_CHARACTER = "CREATE TABLE "
-            + TABLE_CHARACTER + "(" + KEY_ID + " INTEGER PRIMARY KEY,"
+    private static final String CREATE_TABLE_CHARACTERS = "CREATE TABLE "
+            + TABLE_CHARACTERS + "(" + KEY_ID + " INTEGER PRIMARY KEY,"
             + KEY_CHARACTER_NAME + " TEXT, "
             + KEY_CHARACTER_AGE + " TEXT, "
             + KEY_CHARACTER_HEIGHT + " TEXT, "
@@ -85,14 +85,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     //@Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL(CREATE_TABLE_WORLD);
-        sqLiteDatabase.execSQL(CREATE_TABLE_CHARACTER);
+        sqLiteDatabase.execSQL(CREATE_TABLE_CHARACTERS);
         sqLiteDatabase.execSQL(CREATE_TABLE_STORY);
     }
 
     //@Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE_WORLD);
-        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE_CHARACTER);
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE_CHARACTERS);
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE_STORY);
 
         onCreate(sqLiteDatabase);
@@ -140,7 +140,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         cv.put(KEY_CHARACTER_GENDER, character_gender);
         cv.put(KEY_CHARACTER_GROUP, character_group);
         cv.put(KEY_CHARACTER_CONTENT, character_content);
-        long result = db.insert(TABLE_CHARACTER, null, cv);
+        long result = db.insert(TABLE_CHARACTERS, null, cv);
         if (result == -1L) {
             Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show();
         } else {
@@ -190,7 +190,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     void deleteCharacter(String id) {
         SQLiteDatabase db = this.getWritableDatabase();
-        long result = db.delete(TABLE_CHARACTER, "id=?", new String[]{id});
+        long result = db.delete(TABLE_CHARACTERS, "id=?", new String[]{id});
         if (result == -1) {
             Toast.makeText(context, "Failed to Delete.", Toast.LENGTH_SHORT).show();
         } else {
