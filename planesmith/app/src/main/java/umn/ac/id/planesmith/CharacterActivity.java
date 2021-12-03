@@ -8,7 +8,7 @@ import static umn.ac.id.planesmith.DatabaseHelper.KEY_CHARACTER_HEIGHT;
 import static umn.ac.id.planesmith.DatabaseHelper.KEY_CHARACTER_NAME;
 import static umn.ac.id.planesmith.DatabaseHelper.KEY_CHARACTER_WEIGHT;
 import static umn.ac.id.planesmith.DatabaseHelper.KEY_ID;
-import static umn.ac.id.planesmith.DatabaseHelper.TABLE_CHARACTERS;
+import static umn.ac.id.planesmith.DatabaseHelper.TABLE_CHARACTER;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -34,7 +34,7 @@ public class CharacterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_character);
-        Button addNew = (Button) findViewById(R.id.addButton);
+        Button addNew = findViewById(R.id.addButton);
         rvCharacter = findViewById(R.id.rv_character);
 
         addNew.setOnClickListener(v -> {
@@ -49,7 +49,7 @@ public class CharacterActivity extends AppCompatActivity {
         DatabaseHelper dbHelper = new DatabaseHelper(this);
         SQLiteDatabase db = dbHelper.getReadableDatabase();
         String[] projection = {KEY_ID, KEY_CHARACTER_NAME, KEY_CHARACTER_AGE, KEY_CHARACTER_HEIGHT, KEY_CHARACTER_WEIGHT, KEY_CHARACTER_GENDER, KEY_CHARACTER_GROUP, KEY_CHARACTER_CONTENT};
-        Cursor cursor = db.query(TABLE_CHARACTERS, projection, null, null, null, null, null);
+        Cursor cursor = db.query(TABLE_CHARACTER, projection, null, null, null, null, null);
 
         int idColumnIndex = cursor.getColumnIndexOrThrow(KEY_ID);
         int nameColumnIndex = cursor.getColumnIndexOrThrow(KEY_CHARACTER_NAME);
@@ -77,6 +77,5 @@ public class CharacterActivity extends AppCompatActivity {
         cursor.close();
         rvCharacter.setAdapter(new CharacterAdapter(listCharacter));
         rvCharacter.setLayoutManager(new LinearLayoutManager(this));
-
     }
 }

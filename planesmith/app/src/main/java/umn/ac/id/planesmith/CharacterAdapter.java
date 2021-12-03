@@ -23,7 +23,7 @@ public class CharacterAdapter extends RecyclerView.Adapter<CharacterAdapter.MyVi
     @NonNull
     @Override
     public CharacterAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_story, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_character, parent, false);
         return new MyViewHolder(v);
     }
 
