@@ -21,7 +21,6 @@ public class AddStory extends AppCompatActivity {
         chapter_details = findViewById(R.id.chapter_detail);
         add_button = findViewById(R.id.save_story);
         add_button.setOnClickListener(v -> {
-            //TODO: Add save button. Save data goes into Story database.
             DatabaseHelper myDB = new DatabaseHelper(getApplicationContext());
             myDB.addStory(chapter_name.getText().toString().trim(),
                     chapter_details.getText().toString().trim());

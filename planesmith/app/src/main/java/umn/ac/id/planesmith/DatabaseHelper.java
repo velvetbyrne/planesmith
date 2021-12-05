@@ -8,7 +8,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.Toast;
 
-//TODO: Work on Database, make sure everything is running a okay.
 public class DatabaseHelper extends SQLiteOpenHelper {
     //    SQLiteDatabase db;
     Context context;
@@ -98,9 +97,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         onCreate(sqLiteDatabase);
     }
 
-    //TODO: Test-run
-    //TODO: Work on Character table
-
     //ADD FUNCTIONS
     void addWorld(String world_name, String world_content) {
         SQLiteDatabase db = this.getWritableDatabase();
@@ -149,15 +145,49 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     //UPDATE FUNCTIONS
-    //TODO: Make Update functions.
 
-    void updateStory(String row_id, String chapter_title, String chapter_content) {
+    void updateStory(String id, String chapter_title, String chapter_content) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
         cv.put(KEY_CHAPTER_NAME, chapter_title);
         cv.put(KEY_CHAPTER_CONTENT, chapter_content);
 
-        long result = db.update(TABLE_STORY, cv, "_id=?", new String[]{row_id});
+        long result = db.update(TABLE_STORY, cv, "_id=?", new String[]{id});
+        if (result == -1) {
+            Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(context, "Updated Successfully!", Toast.LENGTH_SHORT).show();
+        }
+
+    }
+
+    void updateWorld(String id, String world_title, String world_content) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put(KEY_WORLD_NAME, world_title);
+        cv.put(KEY_WORLD_CONTENT, world_content);
+
+        long result = db.update(TABLE_WORLD, cv, "_id=?", new String[]{id});
+        if (result == -1) {
+            Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(context, "Updated Successfully!", Toast.LENGTH_SHORT).show();
+        }
+
+    }
+
+    void updateCharacter(String id, String character_name, String character_height, String character_weight, String character_age, String character_gender, String character_group, String character_content) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put(KEY_CHARACTER_NAME, character_name);
+        cv.put(KEY_CHARACTER_HEIGHT, character_height);
+        cv.put(KEY_CHARACTER_WEIGHT, character_weight);
+        cv.put(KEY_CHARACTER_AGE, character_age);
+        cv.put(KEY_CHARACTER_GENDER, character_gender);
+        cv.put(KEY_CHARACTER_GROUP, character_group);
+        cv.put(KEY_CHARACTER_CONTENT, character_content);
+
+        long result = db.update(TABLE_CHARACTERS, cv, "_id=?", new String[]{id});
         if (result == -1) {
             Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show();
         } else {
@@ -167,7 +197,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     //DELETE FUNCTIONS
-    //TODO: Re-check functionality.
     void deleteStory(String id) {
         SQLiteDatabase db = this.getWritableDatabase();
         long result = db.delete(TABLE_STORY, "id=?", new String[]{id});

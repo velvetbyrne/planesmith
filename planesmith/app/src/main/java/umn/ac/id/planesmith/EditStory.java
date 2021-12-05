@@ -15,7 +15,6 @@ public class EditStory extends AppCompatActivity {
     Button update_button, delete_button;
 
     String chapter_title, chapter_content;
-    //TODO: Add buttons to activity_edit_story
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +40,4 @@ public class EditStory extends AppCompatActivity {
 
     void getAndSetIntentData() {
     }
-    //TODO: Add call function
-
-    //TODO: Delete function and confirmation dialogue
 }

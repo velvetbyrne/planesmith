@@ -11,7 +11,6 @@ public class EditWorld extends AppCompatActivity {
 
     EditText world_name, world_detail;
     Button update_button, delete_button;
-    //TODO: Add Buttons to view activity_edit_world
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,9 +20,5 @@ public class EditWorld extends AppCompatActivity {
         world_name = findViewById(R.id.world_name2);
         world_detail = findViewById(R.id.world_detail2);
     }
-
-    //TODO: Add call function
-    //TODO: Delete function and confirmation dialogue
-
 
 }

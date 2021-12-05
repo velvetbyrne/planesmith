@@ -21,7 +21,6 @@ public class AddWorld extends AppCompatActivity {
         world_detail = findViewById(R.id.world_detail);
         add_button = findViewById(R.id.save_world);
         add_button.setOnClickListener(v -> {
-            //TODO: Add save button. Save data goes into World database.
             DatabaseHelper myDB = new DatabaseHelper(getApplicationContext());
             myDB.addWorld(world_name.getText().toString().trim(),
                     world_detail.getText().toString().trim());

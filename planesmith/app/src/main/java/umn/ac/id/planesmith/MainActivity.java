@@ -11,8 +11,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
-    //TODO: Check for compatibility issues for UI
-    //TODO: Final check before submission
 
     RecyclerView recyclerView;
     ImageView imageView;

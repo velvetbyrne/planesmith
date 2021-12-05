@@ -29,7 +29,6 @@ public class AddCharacter extends AppCompatActivity {
         add_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //TODO: Add save button. Save data goes into Character database.
                 DatabaseHelper myDB = new DatabaseHelper(AddCharacter.this);
                 myDB.addCharacter(character_name.getText().toString().trim(),
                         character_age.getText().toString().trim(),

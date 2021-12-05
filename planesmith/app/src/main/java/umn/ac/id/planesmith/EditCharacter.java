@@ -10,7 +10,6 @@ public class EditCharacter extends AppCompatActivity {
     //Class is for Updating and Deleting
     EditText character_name, character_age, character_height, character_weight, character_gender, character_group;
     Button update_button, delete_button;
-    //TODO: Add Buttons to view activity_edit_character
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +24,4 @@ public class EditCharacter extends AppCompatActivity {
         character_group = findViewById(R.id.character_group2);
     }
 
-    //TODO: Add call function
-
-    //TODO: Delete function and confirmation dialogue
 }
