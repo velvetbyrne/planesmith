@@ -12,6 +12,7 @@ public class EditWorld extends AppCompatActivity {
     EditText world_name, world_detail;
     Button update_button, delete_button;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,5 +21,7 @@ public class EditWorld extends AppCompatActivity {
         world_name = findViewById(R.id.world_name2);
         world_detail = findViewById(R.id.world_detail2);
     }
+
+
 
 }

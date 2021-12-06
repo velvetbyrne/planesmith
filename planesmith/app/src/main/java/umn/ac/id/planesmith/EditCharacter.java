@@ -23,5 +23,4 @@ public class EditCharacter extends AppCompatActivity {
         character_gender = findViewById(R.id.character_gender2);
         character_group = findViewById(R.id.character_group2);
     }
-
 }

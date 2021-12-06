@@ -16,6 +16,7 @@ public class EditStory extends AppCompatActivity {
 
     String chapter_title, chapter_content;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

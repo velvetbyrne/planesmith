@@ -25,7 +25,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="84dp"
-            android:backgroundTint="@color/abu"
+            android:backgroundTint="@color/white"
             android:padding="15dp"
             android:text="@string/character"
             android:textColor="@color/black"
@@ -39,7 +39,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:backgroundTint="@color/abu"
+            android:backgroundTint="@color/white"
             android:padding="15dp"
             android:text="@string/world"
             android:textColor="@color/black"
@@ -52,7 +52,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:backgroundTint="@color/abu"
+            android:backgroundTint="@color/white"
             android:padding="15dp"
             android:text="@string/story"
             android:textColor="@color/black"
@@ -80,6 +80,17 @@
             android:textColor="@color/black"
             android:textSize="35sp"
             app:layout_constraintTop_toBottomOf="@+id/imageView3"
-            tools:layout_editor_absoluteX="0dp" />
+            tools:layout_editor_absoluteX="0dp"
+            android:textStyle="bold"/>
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/bt_switch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dark Mode     "
+            android:layout_margin="10dp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="600dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
