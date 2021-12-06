@@ -9,7 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.Toast;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
-    //    SQLiteDatabase db;
+    //SQLiteDatabase db;
     Context context;
 
     //LogCat
@@ -145,7 +145,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     //UPDATE FUNCTIONS
-
     void updateStory(String id, String chapter_title, String chapter_content) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
